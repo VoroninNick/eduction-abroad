@@ -53,8 +53,22 @@
     margin: 0 auto;
     background: url('index.-render-shadow.jpg') no-repeat transparent center;
   }
+  #index-render-shadow-rotate{
+    height: 50px;
+    width: 100%;
+    margin: 0 auto;
+    background: url('index.-render-shadow-180rotate.jpg') no-repeat transparent center;
+  }
 
   #index-render-intro{
+    .about-heading{
+        h2{
+          color: rgb(219, 0, 85);
+          margin-top: 1em;
+          margin-bottom: 1.5em;
+          font-family: 'Neucha', cursive;
+        }
+    }
     margin-top: $block-margins;
     .im-descr-section{
       @media (min-width: 1px) and (max-width: 720px) {
@@ -244,6 +258,90 @@
           @media  (min-width: 1px) and (max-width: 959px){
 
           }
+      }
+    }
+  }
+
+  #about-info-blocks{
+    margin-top: $block-margins;
+    .g12{
+      h2{
+        color: rgb(219, 0, 85);
+        margin-top: 1em;
+        margin-bottom: 1.5em;
+        font-family: 'Neucha', cursive;
+      }
+    }
+
+    .in-about{
+      @media (min-width: 1px) and (max-width: 720px) {
+        width: 98%;
+        margin-bottom: 1.5em;
+      }
+      p{
+        color: #585858;
+        font-weight: 300;
+        -webkit-font-smoothing: $text-block-antialaising;
+        width: 70%;
+        margin: 0 auto;
+        @media  (min-width: 960px){
+          @include text-render;
+        }
+        @media  (min-width: 1200px) and (max-width: 1920px){
+          @include text-render;
+        }
+        @media  (min-width: 719px) and (max-width: 959px){
+
+        }
+        @media  (min-width: 1px) and (max-width: 719px){
+          width: 98%;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+
+  #about-services-section{
+
+    .as-section-item{
+      @media (min-width: 1px) and (max-width: 720px) {
+        width: 98%;
+        margin-bottom: 1.5em;
+      }
+
+      .avatar{
+        float: left;
+        width: 30%;
+        margin-right: 2%;
+        img{
+          max-width: 100%;
+          width: 100%;
+        }
+      }
+
+      .description{
+        float: left;
+        width: 68%;
+        margin-top: 2.5em;
+        margin-bottom: 2.5em;
+        @media (min-width: 1px) and (max-width: 480px) {
+          margin-top: 0em;
+          margin-bottom: 0em;
+        }
+        p{
+          color: #585858;
+          font-weight: 300;
+          -webkit-font-smoothing: $text-block-antialaising;
+          @media  (min-width: 960px){
+            @include text-render;
+          }
+          @media  (min-width: 1200px) and (max-width: 1920px){
+            @include text-render;
+          }
+          @media  (min-width: 719px) and (max-width: 959px){
+
+          }
+        }
       }
     }
   }
