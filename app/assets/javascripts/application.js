@@ -17,14 +17,10 @@ var galaxy_s3_mini = 1.5;
 var galaxy_s2 = 1.5;
 var iphone_4s = 1.5;
 
-
 $(document).ready(function() {
     $('.g-custom-mobile-menu').click(function(){
         $('.navigation-block').slideToggle();
     });
-});
-
-$(function () {
 
     if (window.devicePixelRatio == galaxy_s3_mini && window.devicePixelRatio == galaxy_s2 && window.devicePixelRatio == iphone_4s) {
 
@@ -42,5 +38,4 @@ $(function () {
             images[i].src = imageName;
         }
     }
-
 });
