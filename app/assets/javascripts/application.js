@@ -51,5 +51,15 @@ $(document).ready(function() {
         $('.visited').css({
             'cursor': 'auto'
         });
+    }else if(url == '/contact-us'){
+        console.log('Contact page loading header banner...');
+        $('.block-description').hide();
+        $('#main-header').css({
+            'background': 'url("/assets/contact-us-h-bg.jpg") repeat-x transparent',
+            'height': 255
+        });
+        $('.visited').css({
+            'cursor': 'auto'
+        });
     }
 });

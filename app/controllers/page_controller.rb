@@ -6,5 +6,6 @@ class PageController < ApplicationController
   end
 
   def contact
+    @contact = Contact.new
   end
 end

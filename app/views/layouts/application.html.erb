@@ -34,7 +34,7 @@
             <li><%= link_to 'Публікації', '#' %></li>
             <li><%= link_to 'Університети', '#' %></li>
             <li><%= link_to 'Студентам', '#' %></li>
-            <li <% if current_page?(contact_path) %> class="visited" <% end %>><%= link_to 'Контакти', contact_path, :title => 'Контакти' %></li>
+            <li <% if current_page?(contact_path) %> class="visited" <% end %>><%= link_to_unless current_page?(contact_path),'Контакти', contact_path, :title => 'Контакти' %></li>
           </ul>
         </nav>
       </div>
