@@ -13,8 +13,34 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+var galaxy_s3_mini = 1.5;
+var galaxy_s2 = 1.5;
+var iphone_4s = 1.5;
+
+
 $(document).ready(function() {
     $('.g-custom-mobile-menu').click(function(){
         $('.navigation-block').slideToggle();
     });
+});
+
+$(function () {
+
+    if (window.devicePixelRatio == galaxy_s3_mini && window.devicePixelRatio == galaxy_s2 && window.devicePixelRatio == iphone_4s) {
+
+        var images = $("img.hires");
+
+        // loop through the images and make them hi-res
+        for(var i = 0; i < images.length; i++) {
+
+            // create new image name
+            var imageType = images[i].src.substr(-4);
+            var imageName = images[i].src.substr(0, images[i].src.length - 4);
+            imageName += "@2x" + imageType;
+
+            //rename image
+            images[i].src = imageName;
+        }
+    }
+
 });
