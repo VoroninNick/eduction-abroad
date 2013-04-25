@@ -38,4 +38,18 @@ $(document).ready(function() {
             images[i].src = imageName;
         }
     }
+
+    // Variable backgrounder
+    var url = window.location.pathname;
+    if(url == '/about-us'){
+        console.log('About page loading header banner...');
+        $('.block-description').hide();
+        $('#main-header').css({
+            'background': 'url("/assets/about-us-h-bg.jpg") repeat-x transparent',
+            'height': 255
+        });
+        $('.visited').css({
+            'cursor': 'auto'
+        });
+    }
 });
