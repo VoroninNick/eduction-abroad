@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130425212355) do
+ActiveRecord::Schema.define(:version => 20130425214849) do
 
   create_table "articles", :force => true do |t|
     t.string   "name"
@@ -37,5 +37,32 @@ ActiveRecord::Schema.define(:version => 20130425212355) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "students", :force => true do |t|
+    t.string   "question"
+    t.text     "answer"
+    t.boolean  "published"
+    t.string   "slug"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "students", ["slug"], :name => "index_students_on_slug"
+
+  create_table "universities", :force => true do |t|
+    t.string   "name"
+    t.text     "short_descr"
+    t.text     "full_descr"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
+    t.boolean  "published"
+    t.string   "slug"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+  end
+
+  add_index "universities", ["slug"], :name => "index_universities_on_slug"
 
 end
