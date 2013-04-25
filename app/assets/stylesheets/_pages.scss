@@ -125,8 +125,12 @@
       }
     }
   }
-
+  .articles-page{
+    background: transparent !important;
+    border: 0 !important;
+  }
   #index-render-about-wrapper{
+
     margin-top: $block-margins;
     background: url('ir-article-bg.jpg') repeat transparent;
     border-top: 1px solid #f9d4e2;

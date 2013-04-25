@@ -61,5 +61,15 @@ $(document).ready(function() {
         $('.visited').css({
             'cursor': 'auto'
         });
+    }else if(url == '/articles'){
+        console.log('Article page loading header banner...');
+        $('.block-description').hide();
+        $('#main-header').css({
+            'background': 'url("/assets/article-us-h-bg.jpg") repeat-x transparent',
+            'height': 255
+        });
+        $('.visited').css({
+            'cursor': 'auto'
+        });
     }
 });
