@@ -13,8 +13,9 @@ class Article < ActiveRecord::Base
           retina:     '640x640#'
       },
       :storage => :s3,
-      :s3_credentials => '#{Rails.root}/config/amazon-s3.yml',
-      :path => '/:style/:id/:filename'
+      :s3_credentials => Rails.root.join("config/amazon-s3.yml"),
+      :path => '/:style/:id/:filename',
+      :url  => ':s3_eu_url'
 
   def to_param
     slug

@@ -1,6 +1,6 @@
-class ArticleController < ApplicationController
+class ArticlesController < ApplicationController
   def index
-    @articles = Article.order('id').page(params[:page]).per_page(10)
+    @articles = Article.where(:published => true).page(params[:page]).per_page(8)
   end
 
   def show
