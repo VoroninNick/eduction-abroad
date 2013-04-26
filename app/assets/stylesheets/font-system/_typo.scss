@@ -128,3 +128,18 @@ h6,.h6{
     line-height:1.5;    /* 24px */
   }
 }
+.safe_renderin_articles{
+  color: #878787 !important;
+  font-weight: 300 !important;
+  -webkit-font-smoothing: $text-block-antialaising !important;
+  margin-bottom: 2em !important;
+  @media  (min-width: 960px){
+    @include text-render;
+  }
+  @media  (min-width: 1200px) and (max-width: 1920px){
+    @include text-render;
+  }
+  @media  (min-width: 1px) and (max-width: 959px){
+
+  }
+}

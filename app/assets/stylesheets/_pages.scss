@@ -9,7 +9,7 @@
       h2{
         color: #db0055;
         margin-bottom: 1em;
-        font-family: 'Neucha', cursive;
+        font-family: "Comic Sans MS", cursive, sans-serif;
 
         @media (min-width: 1px) and (max-width: 959px)  {
           height: 50px;
@@ -66,7 +66,7 @@
           color: rgb(219, 0, 85);
           margin-top: 1em;
           margin-bottom: 1.5em;
-          font-family: 'Neucha', cursive;
+          font-family: "Comic Sans MS", cursive, sans-serif;
         }
     }
     margin-top: $block-margins;
@@ -141,10 +141,99 @@
         h2{
           color: rgb(219, 0, 85);
           margin-top: 1em;
-          margin-bottom: 0;
-          font-family: 'Neucha', cursive;
+          margin-bottom: 1.5em;
+          font-family: "Comic Sans MS", cursive, sans-serif;
+          a{
+            color: rgb(219, 0, 85);
+            margin-top: 1em;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            &:hover{
+              color: rgb(219, 0, 85);
+              margin-top: 1em;
+              font-family: "Comic Sans MS", cursive, sans-serif;
+            }
+          }
         }
       }
+
+      .push_articles{
+        height: 5px;
+        margin-bottom: 4em;
+      }
+
+      .article-avatar{
+        text-align: center;
+
+        @media  (min-width: 1px) and (max-width: 719px){
+          width: 98%;
+          margin: 0 auto 1em auto;
+        }
+        img{
+          max-width: 100%;
+          width: 100%;
+        }
+      }
+
+      .article-description{
+        @media  (min-width: 1px) and (max-width: 719px){
+          width: 98%;
+          margin: 0 auto;
+        }
+        .name{
+          margin-bottom: 2em;
+          color: rgb(219, 0, 85) !important;
+          font-family: "Comic Sans MS", cursive, sans-serif;
+        }
+        em.release{
+          font-size: 80%;
+          font-style: italic !important;
+          margin-bottom: 2em;
+        }
+        .short_descr{
+          margin-bottom: 2em;
+          font-style: italic !important;
+          width: 75%;
+        }
+        .full_descr{
+          margin-bottom: 2em;
+        }
+      }
+
+      #notification-loading{
+        color: rgb(219, 0, 85);
+        margin-top: 1em;
+        margin-bottom: 0;
+        font-size: 110%;
+        font-family: "Comic Sans MS", cursive, sans-serif
+      }
+      .pagination{
+        color: #868686;
+        margin-top: 1em;
+        margin-bottom: 0;
+        font-size: 110%;
+        font-family: "Comic Sans MS", cursive, sans-serif;
+        text-align: center;
+        a{
+          color: rgb(219, 0, 85);
+          font-family: "Comic Sans MS", cursive, sans-serif;
+          text-align: center;
+          margin: 0 0.5em;
+          &:hover{
+            color: rgb(219, 0, 85);
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            text-align: center;
+          }
+          &:visited{
+            color: rgb(219, 0, 85);
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            text-align: center;
+          }
+        }
+        em{
+          font-style: normal;
+        }
+      }
+
       .ir-about-item{
         margin-top: 1.5em;
         margin-bottom: 1.5em;
@@ -181,7 +270,7 @@
           }
           h3{
             color: #868686;
-            font-family: 'Neucha', cursive;
+            font-family: "Comic Sans MS", cursive, sans-serif;
             a{
               color: inherit;
               font-family: inherit;
@@ -223,7 +312,7 @@
         color: rgb(219, 0, 85);
         margin-top: 1em;
         margin-bottom: 1.5em;
-        font-family: 'Neucha', cursive;
+        font-family: "Comic Sans MS", cursive, sans-serif;
       }
     }
     .ir-feedback-item{
@@ -244,7 +333,7 @@
       }
       h3{
           color: rgb(219, 0, 85);
-          font-family: 'Neucha', cursive;
+          font-family: "Comic Sans MS", cursive, sans-serif;
           margin-top: 1em;
       }
       p{
@@ -273,7 +362,7 @@
         color: rgb(219, 0, 85);
         margin-top: 1em;
         margin-bottom: 1.5em;
-        font-family: 'Neucha', cursive;
+        font-family: "Comic Sans MS", cursive, sans-serif;
       }
     }
 
@@ -360,7 +449,7 @@
         color: rgb(219, 0, 85);
         margin-top: 1em;
         margin-bottom: 1.5em;
-        font-family: 'Neucha', cursive;
+        font-family: "Comic Sans MS", cursive, sans-serif;
       }
       p.telephone{
         color: #585858;
@@ -424,7 +513,7 @@
         color: rgb(219, 0, 85);
         margin-top: 1em;
         margin-bottom: 1.5em;
-        font-family: 'Neucha', cursive;
+        font-family: "Comic Sans MS", cursive, sans-serif;
         font-size: 110%;
       }
       p.mail{
@@ -448,7 +537,7 @@
             width: 100%;
             color: rgb(219, 0, 85);
             padding: 0 1em;
-            font-family: 'Neucha', cursive;
+            font-family: "Comic Sans MS", cursive, sans-serif;
             font-style: italic;
             border: 1px solid #fff;
             background-color: #f3f3f3;
@@ -510,7 +599,7 @@
             width: 100%;
             color: rgb(219, 0, 85);
             padding: 1em 1em 0em 1em;
-            font-family: 'Neucha', cursive;
+            font-family: "Comic Sans MS", cursive, sans-serif;
             font-style: italic;
             border: 1px solid #fff;
             background-color: #f3f3f3;

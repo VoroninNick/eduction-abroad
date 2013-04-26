@@ -1,0 +1,12 @@
+development:
+  bucket: uniabroad
+  access_key_id: AKIAIXK57QWH2ZXGUPSQ
+  secret_access_key: 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
+test:
+  bucket: uniabroad
+  access_key_id: AKIAIXK57QWH2ZXGUPSQ
+  secret_access_key: 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
+production:
+  bucket: uniabroad
+  access_key_id: AKIAIXK57QWH2ZXGUPSQ
+  secret_access_key: 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

@@ -1,0 +1,60 @@
+<script type="text/javascript">
+  $(document).ready(function() {
+      console.log('Article page loading header banner...');
+      $('.block-description').hide();
+      $('#main-header').css({
+        'background': 'url("/assets/article-us-h-bg.jpg") repeat-x transparent',
+        'height': 255
+      });
+      $('.visited').css({
+        'cursor': 'auto'
+      });
+  });
+</script>
+<br class="clear">
+<div id="index-render-about-wrapper" class="articles-page clearfix">
+  <div id="index-render-about" class="container">
+    <div class="g12 alpha">
+      <%= render :partial => 'partials/breadcrumb' %>
+    </div>
+    <br class="clear">
+    <div class="g4 article-avatar alpha">
+      <%= image_tag @article.avatar.url(:show), :alt => @article.name %>
+    </div>
+    <div class="g8 article-description omega">
+      <div class="safe_renderin_articles name">
+        <h2><%= @article.name %></h2>
+      </div>
+      <div class="safe_renderin_articles">
+        <em class="release"><%= @article.created_at %></em>
+      </div>
+      <div class="safe_renderin_articles short_descr">
+        <%=  @article.short_descr %>
+      </div>
+
+      <div class="safe_renderin_articles full_descr">
+        <%= @article.full_descr %>
+      </div>
+    </div>
+    <div class=" g12 alpha push_articles"></div>
+    <br class="clear">
+    <div class="g12 alpha">
+      <h2>Рекомендуємо почитати також:</h2>
+    </div>
+    <br class="clear">
+    <% @last.each do |last_article| %>
+    <div class="g6 ir-about-item <%= cycle('alpha', 'omega') %>">
+      <div class="avatar">
+        <%= link_to(image_tag(last_article.avatar.url(:retina), :alt => last_article.name), article_show_path(last_article), :title => last_article.name) %>
+      </div>
+      <div class="ai-description">
+        <h3><%= link_to last_article.name, article_show_path(last_article), :title => last_article.name %></h3>
+        <p><%= last_article.short_descr %></p>
+      </div>
+    </div><!-- Article item -->
+    <% end %>
+
+  </div>
+</div>
+<br class="clear">
+
