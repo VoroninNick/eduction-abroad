@@ -169,8 +169,15 @@
           color: rgb(219, 0, 85) !important;
           font-family: "Comic Sans MS", cursive, sans-serif;
         }
+        em.release{
+          font-size: 80%;
+          font-style: italic !important;
+          margin-bottom: 2em;
+        }
         .short_descr{
-          margin-bottom: 1em;
+          margin-bottom: 2em;
+          font-style: italic !important;
+          width: 75%;
         }
         .full_descr{
           margin-bottom: 2em;
