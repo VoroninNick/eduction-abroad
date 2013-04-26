@@ -1,0 +1,40 @@
+<script type="text/javascript">
+  $(document).ready(function() {
+      console.log('Article page loading header banner...');
+      $('.block-description').hide();
+      $('#main-header').css({
+        'background': 'url("/assets/article-us-h-bg.jpg") repeat-x transparent',
+        'height': 255
+      });
+      $('.visited').css({
+        'cursor': 'auto'
+      });
+  });
+</script>
+<br class="clear">
+<div id="index-render-about-wrapper" class="articles-page clearfix">
+  <div id="index-render-about" class="container">
+    <div class="g12 alpha">
+
+    </div>
+    <br class="clear">
+    <div class="g4 article-avatar">
+      <%= image_tag @article.avatar.url(:show), :alt => @article.name %>
+    </div>
+    <div class="g8 article-description">
+      <div class="safe_rendering_articles_strong name">
+        <h2><%= @article.name %></h2>
+      </div>
+      <div class="safe_rendering_articles_strong short_descr">
+        <%=  @article.short_descr %>
+      </div>
+
+      <div class="safe_rendering_articles_strong full_descr">
+        <%= @article.full_descr %>
+      </div>
+    </div>
+
+  </div>
+</div>
+<br class="clear">
+

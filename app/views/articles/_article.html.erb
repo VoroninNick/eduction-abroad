@@ -1,0 +1,11 @@
+<%# @articles.each do |article| %>
+<div class="g6 ir-about-item alpha">
+  <div class="avatar">
+    <%= link_to(image_tag(article.avatar.url(:show), :alt => article.name), article_show_path(article), :title => article.name) %>
+  </div>
+  <div class="ai-description">
+    <h3><%= link_to article.name, article_show_path(article), :title => article.name %></h3>
+    <p><%= article.short_descr %></p>
+  </div>
+</div><!-- Article item -->
+<%# end %>
