@@ -16,6 +16,8 @@ gem 'browser'
 gem 'ckeditor'
 gem 'google-webfonts'
 gem 'will_paginate'
+gem 'aws-sdk'
+gem 'aws-s3'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
