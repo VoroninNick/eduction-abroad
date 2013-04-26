@@ -15,6 +15,7 @@ gem 'mobile-fu'
 gem 'browser'
 gem 'ckeditor'
 gem 'google-webfonts'
+gem 'will_paginate'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
