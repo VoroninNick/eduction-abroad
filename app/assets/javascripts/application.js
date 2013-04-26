@@ -45,8 +45,12 @@ $(document).ready(function() {
         console.log('About page loading header banner...');
         $('.block-description').hide();
         $('#main-header').css({
-            'background': 'url("/assets/about-us-h-bg.jpg") repeat-x transparent',
-            'height': 255
+            'background': 'url("/assets/about-us-h-bg.jpg") repeat-x 50% 50% transparent',
+            'height': 255,
+            '-webkit-background-size': 'cover',
+            '-moz-background-size': 'cover',
+            '-o-background-size': 'cover',
+            'background-size': 'cover'
         });
         $('.visited').css({
             'cursor': 'auto'
@@ -55,8 +59,12 @@ $(document).ready(function() {
         console.log('Contact page loading header banner...');
         $('.block-description').hide();
         $('#main-header').css({
-            'background': 'url("/assets/contact-us-h-bg.jpg") repeat-x transparent',
-            'height': 255
+            'background': 'url("/assets/contact-us-h-bg.jpg") repeat-x 50% 50% transparent',
+            'height': 255,
+            '-webkit-background-size': 'cover',
+            '-moz-background-size': 'cover',
+            '-o-background-size': 'cover',
+            'background-size': 'cover'
         });
         $('.visited').css({
             'cursor': 'auto'
@@ -65,8 +73,12 @@ $(document).ready(function() {
         console.log('Article page loading header banner...');
         $('.block-description').hide();
         $('#main-header').css({
-            'background': 'url("/assets/article-us-h-bg.jpg") repeat-x transparent',
-            'height': 255
+            'background': 'url("/assets/article-us-h-bg.jpg") repeat-x 50% 50% transparent',
+            'height': 255,
+            '-webkit-background-size': 'cover',
+            '-moz-background-size': 'cover',
+            '-o-background-size': 'cover',
+            'background-size': 'cover'
         });
         $('.visited').css({
             'cursor': 'auto'
@@ -75,8 +87,12 @@ $(document).ready(function() {
         console.log('Article page loading header banner...');
         $('.block-description').hide();
         $('#main-header').css({
-            'background': 'url("/assets/about-us-h-bg.jpg") repeat-x transparent',
-            'height': 255
+            'background': 'url("/assets/about-us-h-bg.jpg") repeat-x 50% 50% transparent',
+            'height': 255,
+            '-webkit-background-size': 'cover',
+            '-moz-background-size': 'cover',
+            '-o-background-size': 'cover',
+            'background-size': 'cover'
         });
         $('.visited').css({
             'cursor': 'auto'
@@ -85,11 +101,68 @@ $(document).ready(function() {
         console.log('Article page loading header banner...');
         $('.block-description').hide();
         $('#main-header').css({
-            'background': 'url("/assets/uni-us-h-bg.jpg") repeat-x transparent',
-            'height': 255
+            'background': 'url("/assets/uni-us-h-bg.jpg") repeat-x 50% 50% transparent',
+            'height': 255,
+            '-webkit-background-size': 'cover',
+            '-moz-background-size': 'cover',
+            '-o-background-size': 'cover',
+            'background-size': 'cover'
         });
         $('.visited').css({
             'cursor': 'auto'
         });
+    }
+
+    var font = (function () {
+        var test_string = 'mmmmmmmmmwwwwwww';
+        var test_font = '"Comic Sans MS"';
+        var notInstalledWidth = 0;
+        var testbed = null;
+        var guid = 0;
+
+        return {
+            // must be called when the dom is ready
+            setup : function () {
+                if ($('#fontInstalledTest').length) return;
+
+                $('head').append('<' + 'style> #fontInstalledTest, #fontTestBed { position: absolute; left: -9999px; top: 0; visibility: hidden; } #fontInstalledTest { font-size: 50px!important; font-family: ' + test_font + ';}</' + 'style>');
+
+
+                $('body').append('<div id="fontTestBed"></div>').append('<span id="fontInstalledTest" class="fonttest">' + test_string + '</span>');
+                testbed = $('#fontTestBed');
+                notInstalledWidth = $('#fontInstalledTest').width();
+            },
+
+            isInstalled : function(font) {
+                guid++;
+
+                var style = '<' + 'style id="fonttestStyle"> #fonttest' + guid + ' { font-size: 50px!important; font-family: ' + font + ', ' + test_font + '; } <' + '/style>';
+
+                $('head').find('#fonttestStyle').remove().end().append(style);
+                testbed.empty().append('<span id="fonttest' + guid + '" class="fonttest">' + test_string + '</span>');
+
+                return (testbed.find('span').width() != notInstalledWidth);
+            }
+        };
+    })();
+
+    font.setup();
+
+    if(font.isInstalled('Segoi') == true){
+        console.log(font.isInstalled('Segoi') + ':SEGOI');
+    }else if(font.isInstalled('Segoi') == false){
+        console.log(font.isInstalled('Segoi') + ':SEGOI');
+    }
+
+    if(font.isInstalled('Comic Sans MS') == true){
+        console.log(font.isInstalled('Comic Sans MS') + ':Comic Sans MS');
+    }else if(font.isInstalled('Comic Sans MS') == false){
+        console.log(font.isInstalled('Comic Sans MS') + ':Comic Sans MS');
+    }
+
+    if(font.isInstalled('Helvetica Light') == true){
+        console.log(font.isInstalled('Helvetica Light') + ':Helvetica Light');
+    }else if(font.isInstalled('Helvetica LightS') == false){
+        console.log(font.isInstalled('Helvetica Light') + ':Helvetica Light');
     }
 });
