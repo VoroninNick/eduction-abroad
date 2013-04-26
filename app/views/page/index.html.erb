@@ -32,45 +32,20 @@
   <div id="index-render-about" class="container">
 
     <div class="g12 alpha">
-      <h2>Публікації</h2>
+      <h2><%= link_to 'Публікації', article_path, :title => 'Публікації' %></h2>
     </div>
     <br class="clear">
-    <div class="g6 ir-about-item alpha">
-      <div class="avatar">
-        <%= link_to(image_tag('article-1.jpg', :alt => ''), '', :title => '') %>
-      </div>
-      <div class="ai-description">
-        <h3><%= link_to 'Студенти Кіпру протестують: майбутнє всього населення держави під загрозою', '', :title => '' %></h3>
-        <p>Сотні молодих людей вийшли на вулиці Нікосії, обурені діями уряду в умовах економічної кризи. Вже другий тиждень поспіль банки острівної держави зачинені.</p>
-      </div>
-    </div><!-- Article item -->
-    <div class="g6 ir-about-item omega">
-      <div class="avatar">
-        <%= link_to(image_tag('article-2.jpg', :alt => ''), '', :title => '') %>
-      </div>
-      <div class="ai-description">
-        <h3><%= link_to 'Студенти Кіпру протестують: майбутнє всього населення держави під загрозою', '', :title => '' %></h3>
-        <p>Сотні молодих людей вийшли на вулиці Нікосії, обурені діями уряду в умовах економічної кризи. Вже другий тиждень поспіль банки острівної держави зачинені.</p>
-      </div>
-    </div><!-- Article item -->
-    <div class="g6 ir-about-item alpha">
-      <div class="avatar">
-        <%= link_to(image_tag('article-3.jpg', :alt => ''), '', :title => '') %>
-      </div>
-      <div class="ai-description">
-        <h3><%= link_to 'Студенти Кіпру протестують: майбутнє всього населення держави під загрозою', '', :title => '' %></h3>
-        <p>Сотні молодих людей вийшли на вулиці Нікосії, обурені діями уряду в умовах економічної кризи. Вже другий тиждень поспіль банки острівної держави зачинені.</p>
-      </div>
-    </div><!-- Article item -->
-    <div class="g6 ir-about-item omega">
-      <div class="avatar">
-        <%= link_to(image_tag('article-4.jpg', :alt => ''), '', :title => '') %>
-      </div>
-      <div class="ai-description">
-        <h3><%= link_to 'Студенти Кіпру протестують: майбутнє всього населення держави під загрозою', '', :title => '' %></h3>
-        <p>Сотні молодих людей вийшли на вулиці Нікосії, обурені діями уряду в умовах економічної кризи. Вже другий тиждень поспіль банки острівної держави зачинені.</p>
-      </div>
-    </div><!-- Article item -->
+    <% @last.each do |last_article| %>
+      <div class="g6 ir-about-item <%= cycle('alpha', 'omega') %>">
+        <div class="avatar">
+          <%= link_to(image_tag(last_article.avatar.url(:retina), :alt => last_article.name), article_show_path(last_article), :title => last_article.name) %>
+        </div>
+        <div class="ai-description">
+          <h3><%= link_to last_article.name, article_show_path(last_article), :title => last_article.name %></h3>
+          <p><%= last_article.short_descr %></p>
+        </div>
+      </div><!-- Article item -->
+    <% end %>
   </div>
 </div>
 <br class="clear">

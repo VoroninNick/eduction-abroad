@@ -5,6 +5,7 @@ class ArticlesController < ApplicationController
 
   def show
     @article ||= Article.find_by_slug!(params[:id])
+    @last ||= Article.offset(rand(Article.count)).last(4)
   end
 
   #Temporary function
