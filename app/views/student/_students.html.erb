@@ -1,0 +1,9 @@
+<% if current_page?(student_path) %>
+  <% render_student_menu.each do |student| %>
+    <li id='<%= student.id %>' data-name='<%= student.slug %>'><%= link_to student.question, student_show_path(student), :title => student.question %></li>
+  <% end %>
+<% elsif current_page?(student_show_path) %>
+    <% render_student_menu.each do |student| %>
+      <li id='<%= student.id %>' data-name='<%= student.slug %>' <% if params[:id] == student.slug %> class="current" <% end %>><%= link_to student.question, student_show_path(student), :title => student.question %></li>
+    <% end %>
+<% end %>

@@ -129,6 +129,64 @@
     background: transparent !important;
     border: 0 !important;
   }
+
+  .question-wrapper{
+    @media (min-width: 1px) and (max-width: 720px) {
+      width: 98.0%;
+      margin-bottom: 1.5em;
+    }
+  }
+  .student-index-render{
+
+    #index-render-about{
+      .question-holder{
+        list-style: none;
+        @media (min-width: 1px) and (max-width: 720px) {
+          width: 98.0%;
+          margin-bottom: 1.5em;
+        }
+
+        li.current{
+          color: rgb(219, 0, 85);
+          font-size: 1.45em;
+        }
+
+        li{
+          margin-top: 1em;
+          margin-bottom: 1em;
+          font-family: "Comic Sans MS", "URW Palladio L", cursive;
+          font-style: italic;
+          font-weight: normal;
+          color: #585858;
+          a{
+            text-decoration: none;
+            color: #585858;
+            font-size: 1.45em;
+            &:hover{
+              text-decoration: none;
+            }
+            &:visited{
+              color: #585858;
+            }
+            &:active{
+              color: #585858;
+            }
+          }
+        }
+      }
+
+      .answer-holder{
+        margin-top: 2.5em;
+        @media (min-width: 1px) and (max-width: 720px) {
+          width: 98.0%;
+          margin-bottom: 1.5em;
+        }
+        p{
+
+        }
+      }
+    }
+  }
   #index-render-about-wrapper{
 
     margin-top: $block-margins;
