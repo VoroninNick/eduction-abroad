@@ -1,4 +1,6 @@
 UniAbroad::Application.routes.draw do
+  mount RailsAdmin::Engine => '/manage', :as => 'rails_admin'
+
   devise_for :admins
 
   match 'about-us' => 'page#about', :as => 'about', :via => 'get'
