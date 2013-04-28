@@ -1,4 +1,6 @@
 UniAbroad::Application.routes.draw do
+  devise_for :admins
+
   match 'about-us' => 'page#about', :as => 'about', :via => 'get'
   match 'contact-us' => 'page#contact', :as => 'contact', :via => 'get'
   match 'articles' => 'articles#index', :as => 'article', :via => 'get'
