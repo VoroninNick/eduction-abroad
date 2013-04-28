@@ -4,7 +4,7 @@ Devise.setup do |config|
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class with default "from" parameter.
-  config.mailer_sender = "please-change-me-at-config-initializers-devise@example.com"
+  config.mailer_sender = 'support@voroninstudio.eu'
 
   # Configure the class responsible to send e-mails.
   # config.mailer = "Devise::Mailer"
@@ -82,7 +82,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = "246699c6cfdede20a685bc1a4b3f8ebdbb7a704514edfb7c5512d913ea469aa1a2193c3debe78b81d1337668e7d49df857bb532118cf22079cd4195fb238e8c7"
+  config.pepper = '93c4b06845b175da0952736bb00fe0d09bbd3aa5c5764fdd50d0b5d9a01b5c52'
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
@@ -111,7 +111,7 @@ Devise.setup do |config|
 
   # ==> Configuration for :rememberable
   # The time the user will be remembered without asking for credentials again.
-  # config.remember_for = 2.weeks
+  config.remember_for = 1.month
 
   # If true, extends the user's remember period when remembered via cookie.
   # config.extend_remember_period = false
