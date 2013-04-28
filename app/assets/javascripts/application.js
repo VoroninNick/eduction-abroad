@@ -41,6 +41,12 @@ $(document).ready(function() {
 
     // Variable backgrounder
     var url = window.location.pathname;
+
+    // Application urls array
+
+    // Admins urls
+    var admin_url = new Array('/admins', '/admins/sign_in', '/admins/sign_out');
+
     if(url == '/about-us'){
         console.log('About page loading header banner...');
         $('.block-description').hide();
@@ -111,6 +117,20 @@ $(document).ready(function() {
         $('.visited').css({
             'cursor': 'auto'
         });
+    }else if($.inArray(admin_url, url)){
+      console.log('Admins page loading header banner...');
+      $('.block-description').hide();
+      $('#main-header').css({
+        'background': 'url("/assets/about-us-h-bg.jpg") repeat-x 50% 50% transparent',
+        'height': 255,
+        '-webkit-background-size': 'cover',
+        '-moz-background-size': 'cover',
+        '-o-background-size': 'cover',
+        'background-size': 'cover'
+      });
+      $('.visited').css({
+        'cursor': 'auto'
+      });
     }
 
     var font = (function () {
