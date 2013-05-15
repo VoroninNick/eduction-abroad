@@ -9,7 +9,7 @@
       h2{
         color: #db0055;
         margin-bottom: 1em;
-        font-family: "Comic Sans MS", cursive, sans-serif;
+        font-family: 'Segoe Print', Helvetica Neue, italic, cursive;
 
         @media (min-width: 1px) and (max-width: 959px)  {
           height: 50px;
@@ -40,9 +40,9 @@
           width: 100%;
         }
 
-        -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
-        -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
-        box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
+        -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
       }
     }
   }
@@ -66,7 +66,7 @@
           color: rgb(219, 0, 85);
           margin-top: 1em;
           margin-bottom: 1.5em;
-          font-family: "Comic Sans MS", cursive, sans-serif;
+          font-family: 'Segoe Print', Helvetica Neue, italic, cursive;
         }
     }
     margin-top: $block-margins;
@@ -142,15 +142,15 @@
           color: rgb(219, 0, 85);
           margin-top: 1em;
           margin-bottom: 1.5em;
-          font-family: "Comic Sans MS", cursive, sans-serif;
+          font-family: 'Segoe Print', Helvetica Neue, italic, cursive;
           a{
             color: rgb(219, 0, 85);
             margin-top: 1em;
-            font-family: "Comic Sans MS", cursive, sans-serif;
+            font-family: 'Segoe Print', Helvetica Neue, italic, cursive;
             &:hover{
               color: rgb(219, 0, 85);
               margin-top: 1em;
-              font-family: "Comic Sans MS", cursive, sans-serif;
+              font-family: 'Segoe Print', Helvetica Neue, italic, cursive;
             }
           }
         }
@@ -182,7 +182,7 @@
         .name{
           margin-bottom: 2em;
           color: rgb(219, 0, 85) !important;
-          font-family: "Comic Sans MS", cursive, sans-serif;
+          font-family: 'Segoe Print', Helvetica Neue, italic, cursive;
         }
         em.release{
           font-size: 80%;
@@ -211,21 +211,21 @@
         margin-top: 1em;
         margin-bottom: 0;
         font-size: 110%;
-        font-family: "Comic Sans MS", cursive, sans-serif;
+        font-family: 'Segoe Print', Helvetica Neue, italic, cursive;
         text-align: center;
         a{
           color: rgb(219, 0, 85);
-          font-family: "Comic Sans MS", cursive, sans-serif;
+          font-family: 'Segoe Print', Helvetica Neue, italic, cursive;
           text-align: center;
           margin: 0 0.5em;
           &:hover{
             color: rgb(219, 0, 85);
-            font-family: "Comic Sans MS", cursive, sans-serif;
+            font-family: 'Segoe Print', Helvetica Neue, italic, cursive;
             text-align: center;
           }
           &:visited{
             color: rgb(219, 0, 85);
-            font-family: "Comic Sans MS", cursive, sans-serif;
+            font-family: 'Segoe Print', Helvetica Neue, italic, cursive;
             text-align: center;
           }
         }
@@ -270,7 +270,7 @@
           }
           h3{
             color: #868686;
-            font-family: "Comic Sans MS", cursive, sans-serif;
+            font-family: 'Segoe Print', Helvetica Neue, italic, cursive;
             a{
               color: inherit;
               font-family: inherit;
@@ -312,7 +312,7 @@
         color: rgb(219, 0, 85);
         margin-top: 1em;
         margin-bottom: 1.5em;
-        font-family: "Comic Sans MS", cursive, sans-serif;
+        font-family: 'Segoe Print', Helvetica Neue, italic, cursive;
       }
     }
     .ir-feedback-item{
@@ -333,7 +333,7 @@
       }
       h3{
           color: rgb(219, 0, 85);
-          font-family: "Comic Sans MS", cursive, sans-serif;
+          font-family: 'Segoe Print', Helvetica Neue, italic, cursive;
           margin-top: 1em;
       }
       p{
@@ -362,7 +362,7 @@
         color: rgb(219, 0, 85);
         margin-top: 1em;
         margin-bottom: 1.5em;
-        font-family: "Comic Sans MS", cursive, sans-serif;
+        font-family: 'Segoe Print', Helvetica Neue, italic, cursive;
       }
     }
 
@@ -447,7 +447,7 @@
         color: rgb(219, 0, 85);
         margin-top: 1em;
         margin-bottom: 1.5em;
-        font-family: "Comic Sans MS", cursive, sans-serif;
+        font-family: 'Segoe Print', Helvetica Neue, italic, cursive;
       }
       p.telephone{
         color: #585858;
@@ -511,7 +511,7 @@
         color: rgb(219, 0, 85);
         margin-top: 1em;
         margin-bottom: 1.5em;
-        font-family: "Comic Sans MS", cursive, sans-serif;
+        font-family: 'Segoe Print', Helvetica Neue, italic, cursive;
         font-size: 110%;
       }
       p.mail{
@@ -535,7 +535,7 @@
             width: 100%;
             color: rgb(219, 0, 85);
             padding: 0 1em;
-            font-family: "Comic Sans MS", cursive, sans-serif;
+            font-family: 'Segoe Print', Helvetica Neue, italic, cursive;
             font-style: italic;
             border: 1px solid #fff;
             background-color: #f3f3f3;
@@ -597,7 +597,7 @@
             width: 100%;
             color: rgb(219, 0, 85);
             padding: 1em 1em 0em 1em;
-            font-family: "Comic Sans MS", cursive, sans-serif;
+            font-family: 'Segoe Print', Helvetica Neue, italic, cursive;
             font-style: italic;
             border: 1px solid #fff;
             background-color: #f3f3f3;
