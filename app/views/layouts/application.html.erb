@@ -11,9 +11,96 @@
   <link href='http://fonts.googleapis.com/css?family=Neucha&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<% if current_page?(about_path) %>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.block-description').hide();
+      $('#main-header').css({
+        'background': 'url("/assets/about-us-h-bg.jpg") repeat-x 50% 50% transparent',
+        'height': 255,
+        '-webkit-background-size': 'cover',
+        '-moz-background-size': 'cover',
+        '-o-background-size': 'cover',
+        'background-size': 'cover'
+      });
+      $('.visited').css({
+        'cursor': 'auto'
+      });
+    });
+  </script>
+<% elsif current_page?(article_path) || controller_name == 'articles' %>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.block-description').hide();
+      $('#main-header').css({
+        'background': 'url("/assets/article-us-h-bg.jpg") repeat-x 50% 50% transparent',
+        'height': 255,
+        '-webkit-background-size': 'cover',
+        '-moz-background-size': 'cover',
+        '-o-background-size': 'cover',
+        'background-size': 'cover'
+      });
+      $('.visited').css({
+        'cursor': 'auto'
+      });
+    });
+  </script>
+<% elsif current_page?(university_path) || controller_name == 'university' %>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.block-description').hide();
+      $('#main-header').css({
+        'background': 'url("/assets/uni-us-h-bg.jpg") repeat-x 50% 50% transparent',
+        'height': 255,
+        '-webkit-background-size': 'cover',
+        '-moz-background-size': 'cover',
+        '-o-background-size': 'cover',
+        'background-size': 'cover'
+      });
+      $('.visited').css({
+        'cursor': 'auto'
+      });
+    });
+  </script>
+<% elsif current_page?(student_path) || controller_name == 'student' %>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.block-description').hide();
+      $('#main-header').css({
+        'background': 'url("/assets/about-us-h-bg.jpg") repeat-x 50% 50% transparent',
+        'height': 255,
+        '-webkit-background-size': 'cover',
+        '-moz-background-size': 'cover',
+        '-o-background-size': 'cover',
+        'background-size': 'cover'
+      });
+      $('.visited').css({
+        'cursor': 'auto'
+      });
+    });
+  </script>
+<% elsif current_page?(contact_path) %>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.block-description').hide();
+      $('#main-header').css({
+        'background': 'url("/assets/contact-us-h-bg.jpg") repeat-x 50% 50% transparent',
+        'height': 255,
+        '-webkit-background-size': 'cover',
+        '-moz-background-size': 'cover',
+        '-o-background-size': 'cover',
+        'background-size': 'cover'
+      });
+      $('.visited').css({
+        'cursor': 'auto'
+      });
+    });
+  </script>
+<% end %>
 <!-- Header and navigation links -->
 <div id="main-header" class="clearfix">
   <div class="container">
@@ -22,12 +109,12 @@
       <%= link_to('+38 (050) 417-07-28', 'tel:+38 (050) 417-07-28', :title => '+38 (050) 417-07-28') %>
     </div>
     <div class="navigation-wrapper">
-      <div class="g3" id="logotype">
-        <%= link_to_unless current_page?(root_path), image_tag('logo.png', :alt => 'ТзОВ «Перспектива»'), root_path %>
+      <div class="g3 alpha" id="logotype">
+        <%= link_to_unless current_page?(root_path), image_tag('logo.png', :alt => 'ТзОВ «Перспектива»', :style => 'margin-left: 5%;'), root_path %>
       </div>
       <div class="g-custom-mobile-menu">
       </div>
-      <div class="g9 navigation-block">
+      <div class="g9 navigation-block omega">
         <nav>
           <ul>
             <li <% if current_page?(about_path) %> class="visited" <% end %>><%= link_to_unless current_page?(about_path), 'Про нас', about_path, :title => 'Про нас' %></li>
@@ -57,9 +144,22 @@
 <!-- Footer section -->
 <div id="main-footer" class="clearfix">
   <div class="container">
+    <div class="g4 mf-item-block alpha">
+      <p class="copy">© 2012 &mdash; 2013 ТзОВ «Перспектива»</p>
+      <div class="copy-studio"><p class="image-copy"><%= image_tag 'studio-logotype.png', :alt => 'дизайн студією Миколи Вороніна' %></p> <p class="image-text">Зроблено <%= link_to 'дизайн студією Миколи Вороніна', 'http://voroninstudio.eu', :title => 'дизайн студією Миколи Вороніна', :target => '_blank' %>  <br> в 2013р. <%= link_to 'Інформація про сайт', 'http://voroninstudio.eu', :title => 'Інформація про сайт', :target => '_blank' %></p></div>
+    </div>
+
     <div class="g4 mf-item-block">
-      <p class="copyrights">© 2012 ТзОВ «Перспектива»</p>
-      <p class="copyrights-studio">Зроблено дизайн студією Миколи Вороніна <br> в 2013р. Інформація про сайт</p>
+      <%= link_to image_tag('social-links-f.png', :alt => 'Facebook'), facebook_path, :title => 'Facebook', :class => 'social-link' %>
+      <%= link_to image_tag('social-links-t.png', :alt => 'Twitter'), twitter_path, :title => 'Twitter', :class => 'social-link' %>
+      <%= link_to image_tag('social-links-f.png', :alt => 'Google'), google_path, :title => 'Google', :class => 'social-link' %>
+      <%= link_to image_tag('social-links-t.png', :alt => 'Thumblr'), tumblr_path, :title => 'Thumblr', :class => 'social-link' %>
+    </div>
+
+    <div class="g4 mf-item-block omega">
+      <p class="tel">тел.: <span>+38 (032) 244 00 00</span> </p>
+      <p class="fax">факс: <span>+38 (032) 244 00 15</span></p>
+      <p class="more-info"> <%= link_to 'Більш детальна контактна інформація', contact_path, :title => 'Більш детальна контактна інформація' %></p>
     </div>
   </div>
 </div>

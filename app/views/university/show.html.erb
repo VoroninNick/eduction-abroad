@@ -1,2 +1,24 @@
-<h1>University#show</h1>
-<p>Find me in app/views/university/show.html.erb</p>
+<br class="clear">
+<div id="index-render-about-wrapper" class="articles-page clearfix uni-index-render">
+  <div id="index-render-about" class="container">
+    <div class="g12 alpha">
+      <h2>Навчальні заклади з якими ми співпрацюємо</h2>
+    </div>
+    <br class="clear">
+    <div class="g4 alpha uni-avatar">
+      <%= image_tag @uni.avatar.url, :alt => @uni.name %>
+    </div>
+    <div class="g8 omega html_safe uni-descr">
+      <h2><%= @uni.name %></h2>
+      <div class="short-descr">
+        <p><%= @uni.short_descr %></p>
+      </div>
+      <div class="full-descr">
+        <%= @uni.full_descr.html_safe unless @uni.full_descr.blank? %>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+<br class="clear">

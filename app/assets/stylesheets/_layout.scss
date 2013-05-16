@@ -1,6 +1,6 @@
 #main-header{
-  height: 525px;
-  background: url('root_path_left_side.jpg') repeat-x transparent;
+  height: 0px;
+  background: url('root_path_left_side.jpg') repeat-x 0px 0px transparent;
   .container{
     #info-block{
       width: 260px;
@@ -36,7 +36,7 @@
       height: 525px;
       width: 640px;
       position: absolute;
-      right: 0;
+      right: -800px;
       @media  (min-width: 960px){
         width: 500px;
       }
@@ -54,8 +54,9 @@
 
       .bd-wrapper{
         position: absolute;
-        top: 140px;
+        top: 120px;
         right: 50px;
+        opacity: 0;
         @media  (min-width: 1px) and (max-width: 719px){
           background: transparent;
           width: 98%;
@@ -70,10 +71,12 @@
         }
         .bd-head{
           font-weight: 700;
+          line-height: 1em;
+          font-size: 52px;
         }
         .bd-body{
           font-weight: 400;
-          margin: 10px 20px 25px 20px;
+          margin: 10px 20px 40px 20px;
         }
         .bd-button{
           -moz-border-radius: 5px;
@@ -101,6 +104,7 @@
       }
     }
     .navigation-wrapper{
+      opacity: 0;
       position: relative;
       z-index: 100;
       margin: 2em auto 0 auto;
@@ -205,7 +209,7 @@
               text-shadow: 0 0 0;
               color: #fff;
               font-weight: 600;
-              font-size: 1.2em;
+              //font-size: 1.2em;
               a{
                 border-bottom: 1px solid rgba(255, 255, 255, 0);
                 text-shadow: 0 0 0;
@@ -224,6 +228,7 @@
                 margin-right: 0;
                 border-bottom-right-radius: 4px;
                 border-top-right-radius: 4px;
+                border-right: 0;
               }
 
               &:hover{
@@ -306,6 +311,87 @@
     }
     .mf-item-block{
 
+      .social-link{
+        margin-right: 50px;
+        &:last-child{
+          margin-right: 0;
+        }
+      }
+
+      p{
+        font-weight: 400;
+      }
+      .tel{
+        margin-bottom: 0.4em;
+        span{
+          margin-left: 30px;
+        }
+      }
+
+      .fax{
+        margin-bottom: 1.1em;
+        span{
+          margin-left: 25px;
+        }
+      }
+
+      .more-info{
+        font-style: italic;
+        font-size: 0.9em;
+        a{
+          text-decoration: none;
+          color: #ffffff;
+          -webkit-transition: 0.5s ease-in all;
+          -moz-transition: 0.5s ease-in all;
+          -ms-transition: 0.5s ease-in all;
+          -o-transition: 0.5s ease-in all;
+          transition: 0.5s ease-in all;
+          border-bottom: 1px solid rgba(255, 255, 255, 0);
+          &:hover{
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 1);
+          }
+        }
+      }
+      .copy-studio{
+        font-size: 0.9em;
+        @media (min-width: 1220px) and (max-width: 1320px){
+          font-size: 0.81em;
+        }
+        @media (min-width: 1200px) and (max-width: 1220px){
+          font-size: 0.8em;
+        }
+        @media (min-width: 1px) and (max-width: 1200px){
+          font-size: 0.8em;
+        }
+        .image-copy{
+          float: left;
+          img{
+            @media (min-width: 960px) and (max-width: 1320px){
+              width: 80%;
+            }
+          }
+        }
+
+        .image-text{
+          margin-top: 18px;
+          float: left;
+        }
+        a{
+          text-decoration: none;
+          color: #ffffff;
+          -webkit-transition: 0.5s ease-in all;
+          -moz-transition: 0.5s ease-in all;
+          -ms-transition: 0.5s ease-in all;
+          -o-transition: 0.5s ease-in all;
+          transition: 0.5s ease-in all;
+          border-bottom: 1px solid rgba(255, 255, 255, 0);
+          &:hover{
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 1);
+          }
+        }
+      }
       @media  (min-width: 1px) and (max-width: 719px){
         width: 98%;
         margin-bottom: 1.5em;
@@ -320,7 +406,6 @@ textarea{
   color: rgb(219, 0, 85);
   padding: 0 1em;
   font-family: 'Neucha', cursive;
-  font-style: italic;
   border: 1px solid #fff;
   background-color: #f3f3f3;
   -moz-box-shadow: inset 0 0 2px rgba(0,0,0,.16);

@@ -6,12 +6,12 @@
   </div>
   <div class="g4 ip-item">
     <h2>Стипендії та гранти</h2>
-    <%= image_tag 'index-render-2.jpg', :alt => ''  %>
+    <%= image_tag 'index-render-2.jpg', :alt => 'Стипендії та гранти'  %>
     <p>Для найбільш талановитих студентів навчальними закладами за кордоном пропонується перелік стипендій, розмір яких залежить від таких чинників, як успішність навчання у середній школі, спортивні успіхи, склад сім’ї тощо. Додатково студенти можуть брати участь у конкурсах на здобуття гранту на проведення наукових досліджень та проектів, а також підвищення фахового рівня завдяки додатковим навчальним програмам.</p>
   </div>
   <div class="g4 ip-item omega">
     <h2>Розширення світогляду</h2>
-    <%= image_tag 'index-render-3.jpg', :alt => '' %>
+    <%= image_tag 'index-render-3.jpg', :alt => 'Розширення світогляду' %>
     <p>Освіта за кордоном – не лише навчальний процес. Це занурення у середовище людей, які діють згідно європейських стандартів та цінностей, реалізовуючи їх як у побуті, спілкуванні, роботі та навчанні. Значна увага у навчальних закладах європейського зразка приділяється соціальній активності студентів, а також їх особистісній самореалізації та розвитку додаткових вмінь та навичок.</p>
   </div>
   <!-- Info blocks wrappper ends here -->
@@ -20,7 +20,7 @@
 <div id="index-render-shadow"></div>
 <div id="index-render-intro" class="container">
   <div class="g6 alpha im-descr-section">
-    <%= image_tag 'qoute-example.jpg', :alt => '' %>
+    <%= image_tag 'qoute-example.jpg', :alt => 'Твоя перспектива на майбутне' %>
     <p>Вітаємо на нашому сайті - це вікно у світ нових можливостей навчання за кордоном по найкращим умовам!</p>
   </div>
   <div class="g6 omega descr-section">
@@ -30,7 +30,6 @@
 <br class="clear">
 <div id="index-render-about-wrapper" class="clearfix">
   <div id="index-render-about" class="container">
-
     <div class="g12 alpha">
       <h2><%= link_to 'Публікації', article_path, :title => 'Публікації' %></h2>
     </div>
@@ -42,7 +41,7 @@
         </div>
         <div class="ai-description">
           <h3><%= link_to last_article.name, article_show_path(last_article), :title => last_article.name %></h3>
-          <p><%= last_article.short_descr %></p>
+          <%= content_tag(:p , last_article.short_descr, :title => last_article.short_descr) %>
         </div>
       </div><!-- Article item -->
     <% end %>
@@ -51,37 +50,31 @@
 <br class="clear">
 <div id="index-render-feedback" class="container">
   <div class="g12 alpha">
-    <h2>Відгути студентів</h2>
+    <h2>Відгуки студентів</h2>
   </div>
   <br class="clear">
-  <div class="g2 ir-feedback-item">
-    <%= image_tag 'st-1.png', :alt => '' %>
-    <h3 class="name">Маша</h3>
-    <p class="ae"><i>17р.</i></p>
-  </div>
-  <div class="g2 ir-feedback-item">
-    <%= image_tag 'st-2.png', :alt => '' %>
-    <h3 class="name">Фасия</h3>
-    <p class="ae"><i>17р.</i></p>
-  </div>
-  <div class="g2 ir-feedback-item">
-    <%= image_tag 'st-3.png', :alt => '' %>
-    <h3 class="name">Мукаса</h3>
-    <p class="ae"><i>17р.</i></p>
-  </div>
-  <div class="g2 ir-feedback-item">
-    <%= image_tag 'st-4.png', :alt => '' %>
-    <h3 class="name">Маша</h3>
-    <p class="ae"><i>17р.</i></p>
-  </div>
-  <div class="g2 ir-feedback-item">
-    <%= image_tag 'st-5.png', :alt => '' %>
-    <h3 class="name">Васька</h3>
-    <p class="ae"><i>17р.</i></p>
-  </div>
-  <div class="g2 ir-feedback-item">
-    <%= image_tag 'st-3.png', :alt => '' %>
-    <h3 class="name">Клаша</h3>
-    <p class="ae"><i>21р.</i></p>
-  </div>
+  <% @feedback.each do |item| %>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("#toshow-<%= item.id %>").click(function(){
+          $("#popup-feed-<%= item.id %>").toggleClass('show');
+          
+        });
+      });
+    </script>
+    <style type="text/css">
+      .show{
+        display: block !important;
+        z-index: 99999;
+      }
+    </style>
+    <div class="g2 ir-feedback-item <%= cycle('alpha', '', '', '', '', 'omega') %>" id="toshow-<%= item.id %>">
+      <%= image_tag item.avatar.url(:show), :alt => item.feedback %>
+      <h3 class="name"><%= item.name %></h3>
+      <p class="ae"><i><%= item.age %>р.</i></p>
+      <div class="popup-description" id='popup-feed-<%= item.id %>'>
+        <p><%= item.feedback %></p>
+      </div>
+    </div>
+  <% end %>
 </div>

@@ -1,3 +1,4 @@
+# encoding: utf-8
 class Article < ActiveRecord::Base
   attr_accessible :avatar, :full_descr, :name, :published, :short_descr, :slug
 

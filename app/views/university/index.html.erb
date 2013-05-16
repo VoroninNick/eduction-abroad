@@ -5,7 +5,18 @@
       <h2>Навчальні заклади з якими ми співпрацюємо</h2>
     </div>
     <br class="clear">
-
+    <% @unis.each do |uni| %>
+    <div class="g12 uni-item <%= cycle('left', 'right') %>">
+      <div class="avatar">
+        <%= link_to(image_tag(uni.avatar.url, :alt => uni.name), university_show_path(uni), :title => uni.name) %>
+      </div>
+      <div class="description">
+        <h2><%= link_to uni.name, university_show_path(uni) %></h2>
+        <p title="<%= uni.short_descr %>"><%= uni.short_descr %></p>
+      </div>
+    </div> <!-- .uni-item -->
+    <br class="clear">
+    <% end %>
 
   </div>
 </div>
