@@ -19,6 +19,7 @@
   <script type="text/javascript">
     $(document).ready(function() {
       $('.block-description').hide();
+      window.setTimeout(DisplayMenu, 50);
       $('#main-header').css({
         'background': 'url("/assets/about-us-h-bg.jpg") repeat-x 50% 50% transparent',
         'height': 255,
@@ -36,6 +37,7 @@
   <script type="text/javascript">
     $(document).ready(function() {
       $('.block-description').hide();
+      window.setTimeout(DisplayMenu, 50);
       $('#main-header').css({
         'background': 'url("/assets/article-us-h-bg.jpg") repeat-x 50% 50% transparent',
         'height': 255,
@@ -53,6 +55,7 @@
   <script type="text/javascript">
     $(document).ready(function() {
       $('.block-description').hide();
+      window.setTimeout(DisplayMenu, 50);
       $('#main-header').css({
         'background': 'url("/assets/uni-us-h-bg.jpg") repeat-x 50% 50% transparent',
         'height': 255,
@@ -70,6 +73,7 @@
   <script type="text/javascript">
     $(document).ready(function() {
       $('.block-description').hide();
+      window.setTimeout(DisplayMenu, 50);
       $('#main-header').css({
         'background': 'url("/assets/about-us-h-bg.jpg") repeat-x 50% 50% transparent',
         'height': 255,
@@ -87,6 +91,7 @@
   <script type="text/javascript">
     $(document).ready(function() {
       $('.block-description').hide();
+      window.setTimeout(DisplayMenu, 50);
       $('#main-header').css({
         'background': 'url("/assets/contact-us-h-bg.jpg") repeat-x 50% 50% transparent',
         'height': 255,
@@ -99,6 +104,16 @@
         'cursor': 'auto'
       });
     });
+  </script>
+<% elsif current_page?(root_path) %>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      window.setTimeout(PrepareBannerSection, 2000);
+      window.setTimeout(DisplayMenu, 2700);
+      window.setTimeout(DisplayDescr, 3200);
+      window.setTimeout(DisplayDescrBlock, 3300);
+    });
+
   </script>
 <% end %>
 <!-- Header and navigation links -->

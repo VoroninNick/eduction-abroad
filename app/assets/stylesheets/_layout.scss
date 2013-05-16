@@ -73,10 +73,16 @@
           font-weight: 700;
           line-height: 1em;
           font-size: 52px;
+          @media  (min-width: 1px) and (max-width: 1020px){
+            font-size: 40px;
+          }
         }
         .bd-body{
           font-weight: 400;
           margin: 10px 20px 40px 20px;
+          @media  (min-width: 1px) and (max-width: 1200px){
+            margin: 10px 20px 20px 20px;
+          }
         }
         .bd-button{
           -moz-border-radius: 5px;

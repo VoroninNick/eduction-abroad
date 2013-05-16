@@ -37,10 +37,3 @@ function DisplayDescrBlock(){
             easing: 'easeInOutExpo'
         });
 }
-
-$(document).ready(function() {
-    window.setTimeout(PrepareBannerSection, 2000);
-    window.setTimeout(DisplayMenu, 2700);
-    window.setTimeout(DisplayDescr, 3200);
-    window.setTimeout(DisplayDescrBlock, 3300)
-});
