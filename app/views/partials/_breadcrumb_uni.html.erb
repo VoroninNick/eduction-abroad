@@ -1,0 +1,16 @@
+<div id="breadcrumbs-render-main">
+  <ul>
+    <li>
+      <span>\\</span>
+      <%= link_to 'Головна', root_path, :title => 'Головна'  %>
+    </li>
+    <li>
+      <span>\</span>
+      <%= link_to 'Університети', university_path, :title => 'Університети' %>
+    </li>
+    <li>
+      <span>\</span>
+      <%= @uni.name %>
+    </li>
+  </ul>
+</div>

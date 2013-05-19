@@ -172,6 +172,7 @@
           display: none;
           margin: 0;
         }
+        float: right;
         display: block;
         margin-left: 2%;
         margin-right: 0;
@@ -500,6 +501,105 @@ textarea{
         }
         &:visited{
           color: #878787 !important;
+        }
+      }
+    }
+  }
+}
+
+
+table.uni-item-table{
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 1em;
+  thead{
+    width: 100%;
+    background-color: #d10051;
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0iaGF0MCIgZ3JhZGllbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHgxPSI1MCUiIHkxPSIxMDAlIiB4Mj0iNTAlIiB5Mj0iLTEuNDIxMDg1NDcxNTIwMmUtMTQlIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzk1MDAzOSIgc3RvcC1vcGFjaXR5PSIxIi8+CjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Q5MDA1NSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgIDwvbGluZWFyR3JhZGllbnQ+Cgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0idXJsKCNoYXQwKSIgLz4KPC9zdmc+);
+    background-image: -moz-linear-gradient(bottom, #950039 0%, #d90055 100%);
+    background-image: -o-linear-gradient(bottom, #950039 0%, #d90055 100%);
+    background-image: -webkit-linear-gradient(bottom, #950039 0%, #d90055 100%);
+    background-image: linear-gradient(bottom, #950039 0%, #d90055 100%);
+    height: 65px;
+    border-bottom: 1px solid #cfcfcf;
+
+
+    tr{
+      th{
+        width: 24%;
+        height: 74px;
+        text-align: center;
+        color: white;
+        font-weight: 600;
+        font-size: 1.5em;
+        background: url('th-border-right.png') no-repeat right;
+        &:first-child{
+          width: 49%;
+          border-top-left-radius: 6px;
+        }
+        &:last-child{
+          border-top-right-radius: 6px;
+        }
+        p{
+
+        }
+      }
+    }
+  }
+
+  tbody{
+    background-color: #d9d9d9;
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0iaGF0MCIgZ3JhZGllbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHgxPSI1MCUiIHkxPSIxMDAlIiB4Mj0iNTAlIiB5Mj0iLTEuNDIxMDg1NDcxNTIwMmUtMTQlIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2M5YzljOSIgc3RvcC1vcGFjaXR5PSIxIi8+CjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2VkZWRlZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgIDwvbGluZWFyR3JhZGllbnQ+Cgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0idXJsKCNoYXQwKSIgLz4KPC9zdmc+);
+    background-image: -moz-linear-gradient(bottom, #c9c9c9 0%, #ededed 100%);
+    background-image: -o-linear-gradient(bottom, #c9c9c9 0%, #ededed 100%);
+    background-image: -webkit-linear-gradient(bottom, #c9c9c9 0%, #ededed 100%);
+    background-image: linear-gradient(bottom, #c9c9c9 0%, #ededed 100%);
+    .transparent{
+      background: transparent;
+      height: 4px;
+    }
+    tr{
+      td{
+        &:first-child{
+          p{
+            text-align: left;
+            margin-left: 1em;
+          }
+        }
+        p{
+          font-weight: 300;
+          color: #505050;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  tfoot{
+    width: 100%;
+    background-color: #d10051;
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0iaGF0MCIgZ3JhZGllbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHgxPSI1MCUiIHkxPSIxMDAlIiB4Mj0iNTAlIiB5Mj0iLTEuNDIxMDg1NDcxNTIwMmUtMTQlIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzk1MDAzOSIgc3RvcC1vcGFjaXR5PSIxIi8+CjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Q5MDA1NSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgIDwvbGluZWFyR3JhZGllbnQ+Cgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0idXJsKCNoYXQwKSIgLz4KPC9zdmc+);
+    background-image: -moz-linear-gradient(bottom, #950039 0%, #d90055 100%);
+    background-image: -o-linear-gradient(bottom, #950039 0%, #d90055 100%);
+    background-image: -webkit-linear-gradient(bottom, #950039 0%, #d90055 100%);
+    background-image: linear-gradient(bottom, #950039 0%, #d90055 100%);
+    tr{
+      th{
+        width: 24%;
+        height: 14px;
+        text-align: center;
+        color: white;
+        font-weight: 600;
+        font-size: 1.5em;
+        &:first-child{
+          width: 49%;
+          border-bottom-left-radius: 6px;
+        }
+        &:last-child{
+          border-bottom-right-radius: 6px;
+        }
+        p{
+
         }
       }
     }

@@ -253,7 +253,7 @@
             margin-bottom: 1em;
           }
           img{
-            max-width: 100%;
+            max-width: 150px;
             width: 100%;
           }
           a{
@@ -696,6 +696,10 @@
   }
 }
 
+.faq-render{
+  margin-top: 50px;
+}
+
 .html_safe{
   color: #585858 !important;
   font-weight: 300 !important;
@@ -716,7 +720,7 @@
 
 
   .uni-item{
-    padding-bottom: 2.5em;
+    padding-bottom: 5em;
   }
 
   .uni-item.left{
@@ -777,6 +781,7 @@
       }
       p{
         color: #585858;
+        text-align: right !important;
         font-weight: 300;
         -webkit-font-smoothing: $text-block-antialaising;
         @media  (min-width: 960px){
@@ -814,9 +819,21 @@
   }
   .short-descr{
     padding: 1em 0;
+    font-style: italic;
   }
   .full-descr{
     padding: 1em 0;
+    h2{
+      color: #585858;
+    }
+    ul{
+      li{
+        margin: 0.5em 0;
+        span{
+          color: rgb(219, 0, 85);
+        }
+      }
+    }
   }
 }
 

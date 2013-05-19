@@ -7,14 +7,17 @@
     <br class="clear">
 
     <div class="g5 alpha mf">
+      <div id="index-render-shadow"></div>
       <ul>
         <% @students.each do |faq| %>
           <li <% if @student.id == faq.id %> class="visited" <% end %>><%= link_to faq.question, student_show_path(faq) %></li>
         <% end %>
       </ul>
+      <div id="index-render-shadow-rotate"></div>
     </div>
 
-    <div class="g7 omega mf html_safe">
+
+    <div class="g7 omega mf html_safe faq-render">
       <%= @student.answer.html_safe unless @student.answer.blank? %>
     </div>
 
