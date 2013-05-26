@@ -34,7 +34,7 @@
       <h2><%= link_to 'Публікації', article_path, :title => 'Публікації' %></h2>
     </div>
     <br class="clear">
-    <% @last.each do |last_article| %>
+    <% @last.each_with_index do |last_article, idx| %>
       <div class="g6 ir-about-item <%= cycle('alpha', 'omega') %>">
         <div class="avatar">
           <%= link_to(image_tag(last_article.avatar.url(:retina), :alt => last_article.name), article_show_path(last_article), :title => last_article.name) %>
@@ -44,6 +44,9 @@
           <%= content_tag(:p , last_article.short_descr, :title => last_article.short_descr) %>
         </div>
       </div><!-- Article item -->
+      <% if( (idx + 1) % 2 == 0 ) %>
+        <br class="clear">
+      <% end %>
     <% end %>
   </div>
 </div>
