@@ -116,6 +116,24 @@
 
   </script>
 <% end %>
+<% if flash[:notice] %>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.close-bt').click(function(){
+        $('.notice').animate({
+              opacity: 0
+            },
+            {
+              duration: 2000,
+              easing: 'easeInOutExpo'
+            }, function(){
+              $(this).hide();
+            });
+      });
+    });
+  </script>
+  <div class="notice"><%= flash[:notice] %> <span class="close-bt">x</span></div>
+<% end %>
 <!-- Header and navigation links -->
 <div id="main-header" class="clearfix">
   <div class="container">
