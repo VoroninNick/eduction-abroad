@@ -49,10 +49,12 @@
 </div>
 <br class="clear">
 <div id="index-render-feedback" class="container">
-  <div class="g12 alpha">
-    <h2>Відгуки студентів</h2>
-  </div>
-  <br class="clear">
+
+  <% if @feedback.present? %>
+    <div class="g12 alpha">
+      <h2>Відгуки студентів</h2>
+    </div>
+    <br class="clear">
   <% @feedback.each do |item| %>
     <script type="text/javascript">
       $(document).ready(function() {
@@ -76,5 +78,6 @@
         <p><%= item.feedback %></p>
       </div>
     </div>
+  <% end %>
   <% end %>
 </div>
