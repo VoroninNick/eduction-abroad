@@ -9,6 +9,7 @@ UniAbroad::Application.routes.draw do
   match 'contact-us'                        => 'contact#create',                  :as => 'contact', :via => :post
   match 'articles'                          => 'articles#index',                  :as => 'article', :via => 'get'
   match 'articles/:id'                      => 'articles#show',                   :as => 'article_show', :via => 'get'
+  match 'articles/tag/:tag'                 => 'articles#index',              :as => 'article_tag', :via => 'get'
   match 'students'                          => 'student#index',                   :as => 'student', :via => 'get'
   match 'students/:id'                      => 'student#show',                    :as => 'student_show', :via => 'get'
   match 'universities'                      => 'university#index',                :as => 'university', :via => 'get'

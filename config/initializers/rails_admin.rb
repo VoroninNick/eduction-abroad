@@ -50,7 +50,13 @@ RailsAdmin.config do |config|
   # Now you probably need to tour the wiki a bit: https://github.com/sferik/rails_admin/wiki
   # Anyway, here is how RailsAdmin saw your application's models when you ran the initializer:
 
-
+  config.models do
+    edit do
+      fields_of_type :tag_list do
+        partial 'tag_list_with_suggestions'
+      end
+    end
+  end
 
   ###  Article  ###
 

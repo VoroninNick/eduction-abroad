@@ -1,6 +1,9 @@
 # encoding: utf-8
 class Article < ActiveRecord::Base
-  attr_accessible :avatar, :full_descr, :name, :published, :short_descr, :slug
+  attr_accessible :avatar, :full_descr, :name, :published, :short_descr, :slug, :uni_list
+
+  acts_as_taggable
+  acts_as_taggable_on :unis
 
   validates_presence_of :name, :slug, :short_descr, :avatar
   validates_uniqueness_of :name, :slug
@@ -50,7 +53,11 @@ class Article < ActiveRecord::Base
       field :avatar do
         label 'Изображение'
       end
-      field :slug
+      #field :slug
+      field :uni_list do
+        partial 'tag_list_with_suggestions'
+        label 'Тэги'
+      end
     end
   end
 

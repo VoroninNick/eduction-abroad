@@ -19,6 +19,8 @@ gem 'will_paginate'
 gem 'aws-sdk'
 gem 'aws-s3'
 gem 'bourbon'
+gem 'acts-as-taggable-on'
+gem 'rails_admin_tag_list', :github => 'voroninstudio/rails_admin_tag_list'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

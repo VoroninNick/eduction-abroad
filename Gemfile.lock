@@ -31,6 +31,14 @@ GIT
     fancybox-rails (0.1.5)
       railties (>= 3.1.0)
 
+GIT
+  remote: git://github.com/voroninstudio/rails_admin_tag_list.git
+  revision: 28217912cd8849354a7976a8714995bac03e0574
+  specs:
+    rails_admin_tag_list (0.1.5)
+      rails (>= 3.1)
+      rails_admin (>= 0.0.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -61,6 +69,8 @@ GEM
     activesupport (3.2.13)
       i18n (= 0.6.1)
       multi_json (~> 1.0)
+    acts-as-taggable-on (2.4.1)
+      rails (>= 3, < 5)
     arel (3.0.2)
     aws-s3 (0.6.3)
       builder
@@ -220,6 +230,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts-as-taggable-on
   aws-s3
   aws-sdk
   better_errors
@@ -243,6 +254,7 @@ DEPENDENCIES
   rails (= 3.2.13)
   rails-i18n
   rails_admin!
+  rails_admin_tag_list!
   russian
   sass-rails (~> 3.2.3)
   sqlite3
