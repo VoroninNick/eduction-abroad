@@ -1,0 +1,34 @@
+
+
+
+<br class="clear">
+<div id="index-render-about-wrapper" class="articles-page clearfix">
+  <div id="index-render-about" class="container">
+    <div class="g12 alpha">
+      <h2>Войти в панель управления</h2>
+    </div>
+    <br class="clear">
+    <div class="g5 alpha">
+      <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+        <div><%= f.label :email %><br />
+          <%= f.email_field :email, :autofocus => true %></div>
+
+        <div><%= f.label :password %><br />
+          <%= f.password_field :password %></div>
+
+        <% if devise_mapping.rememberable? -%>
+          <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+        <% end -%>
+
+        <div><%= f.submit "Sign in" %></div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<br class="clear">
+<style type="text/css">
+  #main-footer,
+  #main-header{
+    display: none !important;
+  }
+</style>
