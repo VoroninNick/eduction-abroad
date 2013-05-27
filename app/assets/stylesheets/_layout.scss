@@ -631,3 +631,20 @@ table.uni-item-table{
     cursor: pointer;
   }
 }
+
+
+
+#heading-for-banners{
+  @extend .clearfix;
+  @extend .container;
+  width: 100% !important;
+  h1{
+    width: 100%;
+    text-align: right;
+    margin-bottom: 1em;
+    font-family: 'Segoe Print', Helvetica Neue, italic, cursive;
+    color: #ffffff;
+    position: relative;
+    top: 100px;
+  }
+}

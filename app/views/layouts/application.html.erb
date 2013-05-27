@@ -183,7 +183,19 @@
         <p class="bd-body">Європейська освіта, старт вашої кар'єри, гарантоване працевлаштування</p>
         <p><%= link_to 'ПРИЄДНУЙСЯ!', about_path, :title => '', :class => 'bd-button' %></p>
       </div>
-
+    </div>
+    <div id="heading-for-banners">
+      <% if current_page?(about_path) %>
+      <h1>Про нас</h1>
+      <% elsif current_page?(article_path) || controller_name == 'articles' %>
+      <h1>Публікації</h1>
+      <% elsif current_page?(university_path) || controller_name == 'university' %>
+      <h1>Університети</h1>
+      <% elsif current_page?(student_path) || controller_name == 'student' %>
+      <h1>Студентам</h1>
+      <% elsif current_page?(contact_path) %>
+      <h1>Контакти</h1>
+      <% end %>
     </div>
   </div>
 </div>
