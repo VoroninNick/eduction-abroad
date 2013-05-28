@@ -44,7 +44,7 @@ function ShowMainMenuINIT(){
                 opacity: 1
             },
             {
-                duration: 800,
+                duration: 1800,
                 easing: 'easeInOutExpo'
             });
     }, function(){
@@ -52,7 +52,7 @@ function ShowMainMenuINIT(){
                 opacity: 0.6
             },
             {
-                duration: 800,
+                duration: 2800,
                 easing: 'easeInOutExpo'
             });
     });
