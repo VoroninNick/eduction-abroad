@@ -33,7 +33,7 @@
       </div>
 
       <div class="safe_renderin_articles full_descr">
-        <%= @article.full_descr %>
+        <%= @article.full_descr.html_safe unless @article.full_descr.blank? %>
       </div>
     </div>
     <div class=" g12 alpha push_articles"></div>
