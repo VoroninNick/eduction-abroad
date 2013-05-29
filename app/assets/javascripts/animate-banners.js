@@ -13,7 +13,7 @@ function DisplayMenu(){
             opacity: 0.6
         },
         {
-            duration: 2000,
+            duration: 3800,
             easing: 'easeInOutExpo'
         });
 }
