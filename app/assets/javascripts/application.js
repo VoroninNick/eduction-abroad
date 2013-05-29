@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require fancybox
 //= require_tree .
 var galaxy_s3_mini = 1.5;
 var galaxy_s2 = 1.5;

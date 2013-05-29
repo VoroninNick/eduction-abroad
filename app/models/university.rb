@@ -1,10 +1,13 @@
 # encoding: utf-8
 class University < ActiveRecord::Base
-  attr_accessible :avatar, :full_descr, :name, :published, :short_descr, :slug
+  attr_accessible :avatar, :full_descr, :name, :published, :short_descr, :slug, :delete_avatar, :assets_attributes
 
   validates_presence_of :name, :slug, :short_descr
   validates_uniqueness_of :name, :slug
   before_validation :get_url
+
+  attr_accessor :delete_avatar
+  before_validation { self.avatar.clear if self.delete_avatar == '1' }
 
   has_attached_file :avatar,
                     :styles => {
@@ -19,6 +22,9 @@ class University < ActiveRecord::Base
                     :s3_credentials => Rails.root.join("config/amazon-s3.yml"),
                     :path => '/:style/:id/:filename',
                     :url  => ':s3_eu_url'
+
+  has_many :assets, :class_name => 'Asset', :as => :assetable, :dependent => :destroy
+  accepts_nested_attributes_for :assets
 
   rails_admin do
     list do
@@ -52,9 +58,14 @@ class University < ActiveRecord::Base
       field :avatar do
         label 'Изображение'
       end
+
       field :slug do
         label 'Ссылка'
         read_only true
+      end
+
+      field :assets, :has_many_association do
+        label 'Галерея'
       end
     end
   end

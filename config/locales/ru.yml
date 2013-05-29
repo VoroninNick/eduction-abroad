@@ -94,6 +94,7 @@ ru:
         menu: "История"
         breadcrumb: "история"
     form:
+      new_model: "Новое изображение"
       cancel: "Отмена"
       basic_info: "Основное"
       required: "Требуемое"
@@ -139,3 +140,4 @@ ru:
       university: "Университеты"
       article: "Публикации"
       feedback: "Отзывы"
+      asset: "Галереи"

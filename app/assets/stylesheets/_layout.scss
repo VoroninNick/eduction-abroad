@@ -648,3 +648,26 @@ table.uni-item-table{
     top: 100px;
   }
 }
+
+
+
+.uni-galleries{
+  width: 100%;
+  @extend .clearfix;
+  h2{
+    color: #db0055;
+    margin-bottom: 1.5em;
+    font-family: 'Segoe Print', Helvetica Neue, italic, cursive;
+  }
+
+  .galleries-item{
+    width: 21.5%;
+    margin-left: 1%;
+    a{
+      img{
+        border-radius: 100px;
+        width: 100%;
+      }
+    }
+  }
+}

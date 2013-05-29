@@ -21,6 +21,7 @@ gem 'aws-s3'
 gem 'bourbon'
 gem 'acts-as-taggable-on'
 gem 'rails_admin_tag_list', :github => 'voroninstudio/rails_admin_tag_list'
+gem 'paperclip-watermark'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

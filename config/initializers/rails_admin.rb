@@ -30,7 +30,7 @@ RailsAdmin.config do |config|
   # config.excluded_models = ['Article', 'Contact', 'Student', 'University']
 
   # Include specific models (exclude the others):
-  config.included_models = ['Article', 'Student', 'University', 'Feedback']
+  config.included_models = ['Article', 'Student', 'University', 'Feedback', 'Asset']
 
   # Label methods for model instances:
   # config.label_methods << :description # Default is [:name, :title]

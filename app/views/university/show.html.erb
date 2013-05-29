@@ -2,7 +2,7 @@
 <div id="index-render-about-wrapper" class="articles-page clearfix uni-index-render">
   <div id="index-render-about" class="container">
     <div class="g12 alpha">
-      <h2>Партнерські навчальні заклади за кордоном</h2>
+      <h2>Освіта за кордоном</h2>
     </div>
     <br class="clear">
     <div class="g12 alpha">
@@ -20,119 +20,23 @@
       </div>
       <div class="full-descr">
         <%= @uni.full_descr.html_safe unless @uni.full_descr.blank? %>
+      </div> <!-- full -->
 
-        <h2>Запрошуемо всіх заповнити статтю</h2>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-
-        <table class="uni-item-table">
-          <thead>
-          <tr>
-            <th>Академічна програма</th>
-            <th>Сутпінь</th>
-            <th>Тривалість</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr class="transparent" colspan="3">
-            &nbsp;
-          </tr>
-          <tr>
-            <td>
-              <p>Операційний готельний менеджмент - F&B</p>
-              <p>Hospitality operational manager - F&B</p>
-            </td>
-            <td>
-              <p>Диплом</p>
-            </td>
-            <td>
-              <p>2 роки</p>
-            </td>
-          </tr>
-          <tr class="transparent" colspan="3">
-            &nbsp;
-          </tr>
-          <tr>
-            <td>
-              <p>Операційний готельний менеджмент - F&B</p>
-              <p>Hospitality operational manager - F&B</p>
-            </td>
-            <td>
-              <p>Диплом</p>
-            </td>
-            <td>
-              <p>2 роки</p>
-            </td>
-          </tr>
-          <tr class="transparent" colspan="3">
-            &nbsp;
-          </tr>
-          <tr>
-            <td>
-              <p>Операційний готельний менеджмент - F&B</p>
-              <p>Hospitality operational manager - F&B</p>
-            </td>
-            <td>
-              <p>Диплом</p>
-            </td>
-            <td>
-              <p>2 роки</p>
-            </td>
-          </tr>
-          <tr class="transparent" colspan="3">
-            &nbsp;
-          </tr>
-          <tr>
-            <td>
-              <p>Операційний готельний менеджмент - F&B</p>
-              <p>Hospitality operational manager - F&B</p>
-            </td>
-            <td>
-              <p>Диплом</p>
-            </td>
-            <td>
-              <p>2 роки</p>
-            </td>
-          </tr>
-          <tr class="transparent" colspan="3">
-            &nbsp;
-          </tr>
-          <tr>
-            <td>
-              <p>Операційний готельний менеджмент - F&B</p>
-              <p>Hospitality operational manager - F&B</p>
-            </td>
-            <td>
-              <p>Диплом</p>
-            </td>
-            <td>
-              <p>2 роки</p>
-            </td>
-          </tr>
-          <tr class="transparent" colspan="3">
-            &nbsp;
-          </tr>
-          </tbody>
-          <tfoot>
-          <tr>
-            <th>&nbsp;</th>
-            <th>&nbsp;</th>
-            <th>&nbsp;</th>
-          </tr>
-          </tfoot>
-        </table>
-        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
-        <h2>Contrary to popular belief</h2>
-        <ul>
-          <li><span>&mdash;</span> Lorem Ipsum is not simply random text</li>
-          <li><span>&mdash;</span> Lorem Ipsum is not simply random text</li>
-          <li><span>&mdash;</span> Lorem Ipsum is not simply random text</li>
-          <li><span>&mdash;</span> Lorem Ipsum is not simply random text</li>
-          <li><span>&mdash;</span> Lorem Ipsum is not simply random text</li>
-          <li><span>&mdash;</span> Lorem Ipsum is not simply random text</li>
-          <li><span>&mdash;</span> Lorem Ipsum is not simply random text</li>
-        </ul>
+      <% if @uni.assets.present? %>
+      <script type="text/javascript">
+        $(document).ready(function() {
+          $("a.fancybox").fancybox();
+        });
+      </script>
+      <div class="uni-galleries">
+        <h2>Галерея</h2>
+        <% @uni.assets.each do |a| %>
+          <div class="galleries-item">
+            <%= link_to(image_tag(a.attachment.url(:small), :style => 'margin-bottom: 10px;'), a.attachment.url(:original), :class => 'fancybox', :rel => 'gallery') %>
+          </div>
+        <% end %>
       </div>
-
+      <% end %>
     </div>
 
   </div>
