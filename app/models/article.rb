@@ -2,6 +2,13 @@
 class Article < ActiveRecord::Base
   attr_accessible :avatar, :full_descr, :name, :published, :short_descr, :slug, :uni_list
 
+  # Adding translate Class
+  translates :full_descr, :short_descr, :name
+
+  class Translation
+    attr_accessible :locale
+  end
+
   acts_as_taggable
   acts_as_taggable_on :unis
 

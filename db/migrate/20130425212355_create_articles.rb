@@ -14,5 +14,6 @@ class CreateArticles < ActiveRecord::Migration
       t.timestamps
     end
     add_index :articles, :slug
+    Article.create_translation_table! :name => :string, :short_description => :text, :full_description => :text
   end
 end

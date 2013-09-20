@@ -22,6 +22,8 @@ gem 'bourbon'
 gem 'acts-as-taggable-on'
 gem 'rails_admin_tag_list', :github => 'voroninstudio/rails_admin_tag_list'
 gem 'paperclip-watermark'
+gem 'globalize3'
+gem 'rails_admin_globalize', :github => 'voroninstudio/rails_admin_globalize'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

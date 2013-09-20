@@ -5,6 +5,40 @@ RailsAdmin.config do |config|
 
 
   ################  Global configuration  ################
+  config.actions do
+    dashboard do
+    end
+
+    globalize do
+    end
+
+    index do
+    end
+
+    new do
+    end
+
+    export do
+    end
+
+    bulk_delete do
+    end
+
+    show do
+    end
+
+    edit do
+    end
+
+    delete do
+    end
+
+    history_show do
+    end
+
+    show_in_app do
+    end
+  end
 
   # Set the admin name here (optional second array element will appear in red). For example:
   config.main_app_name = ['Education Abroad', 'managing panel']

@@ -32,6 +32,19 @@ GIT
       railties (>= 3.1.0)
 
 GIT
+  remote: git://github.com/voroninstudio/rails_admin_globalize.git
+  revision: e06d3133c91b521794517e4a9ea2d3a1796958df
+  specs:
+    rails_admin_globalize (0.0.3)
+      coffee-rails
+      globalize3 (>= 0.2.0)
+      haml-rails
+      jquery-ui-rails (= 3.0.1)
+      rails (>= 3.1)
+      rails_admin
+      sass-rails
+
+GIT
   remote: git://github.com/voroninstudio/rails_admin_tag_list.git
   revision: 28217912cd8849354a7976a8714995bac03e0574
   specs:
@@ -120,10 +133,19 @@ GEM
     font-awesome-sass-rails (3.0.2.2)
       railties (>= 3.1.1)
       sass-rails (>= 3.1.1)
+    globalize3 (0.3.0)
+      activemodel (>= 3.0.0)
+      activerecord (>= 3.0.0)
+      paper_trail (~> 2)
     google-webfonts (0.1.2)
       actionpack (>= 3.0.0)
     haml (4.0.2)
       tilt
+    haml-rails (0.4)
+      actionpack (>= 3.1, < 4.1)
+      activesupport (>= 3.1, < 4.1)
+      haml (>= 3.1, < 4.1)
+      railties (>= 3.1, < 4.1)
     hike (1.2.2)
     i18n (0.6.1)
     journey (1.0.4)
@@ -155,6 +177,9 @@ GEM
     nested_form (0.3.2)
     nokogiri (1.5.9)
     orm_adapter (0.4.0)
+    paper_trail (2.7.2)
+      activerecord (~> 3.0)
+      railties (~> 3.0)
     paperclip (3.4.1)
       activemodel (>= 3.0.0)
       activerecord (>= 3.0.0)
@@ -244,6 +269,7 @@ DEPENDENCIES
   devise
   fancybox-rails!
   flexslider!
+  globalize3
   google-webfonts
   jquery-migrate-rails
   jquery-rails
@@ -257,6 +283,7 @@ DEPENDENCIES
   rails (= 3.2.13)
   rails-i18n
   rails_admin!
+  rails_admin_globalize!
   rails_admin_tag_list!
   russian
   sass-rails (~> 3.2.3)
