@@ -157,6 +157,10 @@
 <!-- Header and navigation links -->
 <div id="main-header" class="clearfix">
   <div class="container">
+    <div class="lang_bar">
+      <%= link_to 'ua', '/uk', :title => 'Українська мова', :class => if I18n.locale == :uk; 'active' end %>
+      <%= link_to 'ru', '/ru', :title => 'Русский язык', :class => if I18n.locale == :ru; 'active' end %>
+    </div>
     <div id="info-block">
       <%= image_tag('mail-1.png', :style => 'margin-right: 10px;') %><%= mail_to('i@education-abroad.com.ua', 'info') %>
       <%= image_tag('phone-2.png', :style => 'margin-right: 10px;') %><%= link_to('+38 (098) 22 66 111', 'tel:+38 (098) 22 66 111', :title => '+38 (098) 22 66 111') %>
