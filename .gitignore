@@ -23,7 +23,7 @@
 # Mac os x
 .DS_Store
 .rvmrc
-
+/vendor
 # Tmp
 /tmp/cache
 /tmp/data
