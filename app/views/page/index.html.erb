@@ -1,18 +1,18 @@
 <div id="index-render" class="container">
   <div class="g4 ip-item alpha">
-    <h2>Старт професійної кар’єри</h2>
-    <%= image_tag 'index-render-1.jpg', :alt => 'Старт професійної кар’єри' %>
-    <p>Декотрі з навчальних закладів беруть на себе зобов’язання щодо працевлаштування студентів у вільний від навчання час за профільними напрямками спеціальності у провідних європейських компаніях. Це дає можливість поєднувати теорію з практикою, а також здобути перший кар’єрний розвиток за фаховою спеціальністю.</p>
+    <h2><%= t('variables.main_page.first_section_heading') %></h2>
+    <%= image_tag 'index-render-1.jpg', :alt => t('variables.main_page.first_section_heading') %>
+    <p><%= t('variables.main_page.first_section_text') %></p>
   </div>
   <div class="g4 ip-item">
-    <h2>Стипендії та гранти</h2>
-    <%= image_tag 'index-render-2.jpg', :alt => 'Стипендії та гранти'  %>
-    <p>Для найбільш талановитих студентів навчальними закладами за кордоном пропонується перелік стипендій, розмір яких залежить від таких чинників, як успішність навчання у середній школі, спортивні успіхи, склад сім’ї тощо. Додатково студенти можуть брати участь у конкурсах на здобуття гранту на проведення наукових досліджень та проектів, а також підвищення фахового рівня завдяки додатковим навчальним програмам.</p>
+    <h2><%= t('variables.main_page.second_section_heading') %></h2>
+    <%= image_tag 'index-render-2.jpg', :alt => t('variables.main_page.second_section_heading')  %>
+    <p><%= t('variables.main_page.second_section_text') %></p>
   </div>
   <div class="g4 ip-item omega">
-    <h2>Розширення світогляду</h2>
-    <%= image_tag 'index-render-3.jpg', :alt => 'Розширення світогляду' %>
-    <p>Освіта за кордоном – не лише навчальний процес. Це занурення у середовище людей, які діють згідно європейських стандартів та цінностей, реалізовуючи їх як у побуті, спілкуванні, роботі та навчанні. Значна увага у навчальних закладах європейського зразка приділяється соціальній активності студентів, а також їх особистісній самореалізації та розвитку додаткових вмінь та навичок.</p>
+    <h2><%= t('variables.main_page.third_section_heading') %></h2>
+    <%= image_tag 'index-render-3.jpg', :alt => t('variables.main_page.third_section_heading') %>
+    <p><%= t('variables.main_page.third_section_text') %></p>
   </div>
   <!-- Info blocks wrappper ends here -->
 </div>
@@ -20,18 +20,18 @@
 <div id="index-render-shadow"></div>
 <div id="index-render-intro" class="container">
   <div class="g6 alpha im-descr-section">
-    <%= image_tag 'qoute-example.jpg', :alt => 'Твоя перспектива на майбутне' %>
-    <p>Вітаємо на нашому сайті - це вікно у світ нових можливостей навчання за кордоном!</p>
+    <%= image_tag 'qoute-example.jpg', :alt => t('variables.main_page.quote_image_alt') %>
+    <p><%= t('variables.main_page.quote_image_title') %></p>
   </div>
   <div class="g6 omega descr-section">
-    <p>З кожним роком навчання за кордоном стає дедалі більш популярним серед української молоді. Освіта, здобута у провідних європейських навчальних закладах, стає надійним фундаментом майбутнього кар’єрного зростання. Це поєднання теорії та навчальної практики у провідних європейських компаніях, досвіду міжнародного спілкування та побудови кар’єри у якості фахівця за обраним напрямком навчання. Ну і, звичайно ж, досконале засвоєння іноземної мови.</p>
+    <p><%= t('variables.main_page.quote_text') %></p>
   </div>
 </div>
 <br class="clear">
 <div id="index-render-about-wrapper" class="clearfix">
   <div id="index-render-about" class="container">
     <div class="g12 alpha">
-      <h2><%= link_to 'Публікації', article_path, :title => 'Публікації' %></h2>
+      <h2><%= link_to t('variables.menu.articles'), article_path, :title => t('variables.menu.articles') %></h2>
     </div>
     <br class="clear">
     <% @last.each_with_index do |last_article, idx| %>
@@ -55,7 +55,7 @@
 
   <% if @feedback.present? %>
     <div class="g12 alpha">
-      <h2>Відгуки студентів</h2>
+      <h2><%= t('variables.main_page.student_feedback') %></h2>
     </div>
     <br class="clear">
   <% @feedback.each do |item| %>

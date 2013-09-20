@@ -1,14 +1,14 @@
 <br class="clear">
 <div id="contact-render" class="container">
   <div class="g12 alpha contact-heading tc">
-    <h2>Нам можна зателефонувати!</h2>
+    <h2><%= t('variables.contact_page.heading') %></h2>
     <p class="telephone tc margin"><%= link_to '+38 (098) 22 66 111', 'tel:+ +38 (098) 22 66 111', :title => '+38 (098) 22 66 111' %></p>
     <br class="clear">
-    <p class="tc  pink">або написати ел. листа</p>
+    <p class="tc  pink"><%= t('variables.contact_page.or') %></p>
     <p class="tc margin mail-link"><%= mail_to 'i@education-abroad.com.ua' %></p>
     <br class="clear">
     <br>
-    <p class="tc mail pink">Або скористатись формою</p>
+    <p class="tc mail pink"><%= t('variables.contact_page.second_or') %></p>
   </div>
   <br class="clear">
   <div id="form-wrapper-contact">
@@ -16,23 +16,23 @@
       <div class="g4 left-side alpha">
         <div class="row-input">
           <%= form.text_field :name, :placeholder => 'Микола Валерійович' %>
-          <%= form.label 'прізвище, імя ' %>
+          <%= form.label t('variables.contact_page.label_name') %>
         </div>
         <div class="row-input">
           <%= form.text_field :email, :placeholder => 'support@voroninstudio.eu' %>
-          <%= form.label 'eл. пошта' %>
+          <%= form.label t('variables.contact_page.label_email') %>
         </div>
         <div class="row-input">
           <%= form.text_field :telephone, :placeholder => '+38 (050) 417 07 28' %>
-          <%= form.label 'номер телефону *' %>
+          <%= form.label t('variables.contact_page.label_phone') %>
         </div>
       </div>
       <div class="g8 right-side omega">
         <div class="row-input">
           <%= form.text_area :body, :placeholder => 'З кожним роком навчання за кордоном стає дедалі більш популярним серед української молоді. Освіта, здобута у провідних європейських навчальних закладах, стає надійним фундаментом майбутнього кар’єрного зростання. Це поєднання теорії та навчальної практики у провідних європейських компаніях, досвіду міжнародного спілкування та побудови кар’єри у якості фахівця за обраним напрямком навчання. Ну і, звичайно ж, досконале засвоєння іноземної мови.' %>
-          <%= form.label 'текст повідомлення *' %>
+          <%= form.label t('variables.contact_page.label_text') %>
         </div>
-        <%= form.submit 'Надіслати', :class => 'submit-button' %>
+        <%= form.submit t('variables.contact_page.submit'), :class => 'submit-button' %>
       </div>
 
 

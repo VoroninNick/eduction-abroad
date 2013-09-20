@@ -2,7 +2,7 @@
 <div id="index-render-about-wrapper" class="articles-page clearfix uni-index-render">
   <div id="index-render-about" class="container">
     <div class="g12 alpha">
-      <h2>Освіта за кордоном</h2>
+      <h2><%= t('variables.uni_page.some_heading') %></h2>
     </div>
     <br class="clear">
     <div class="g12 alpha">
@@ -29,7 +29,7 @@
         });
       </script>
       <div class="uni-galleries">
-        <h2>Галерея</h2>
+        <h2><%= t('variables.uni_page.gellery') %></h2>
         <% @uni.assets.each do |a| %>
           <div class="galleries-item">
             <%= link_to(image_tag(a.attachment.url(:small), :style => 'margin-bottom: 10px;'), a.attachment.url(:original), :class => 'fancybox', :rel => 'gallery') %>

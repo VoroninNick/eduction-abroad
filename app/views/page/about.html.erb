@@ -1,28 +1,28 @@
 <br class="clear">
 <div id="index-render-intro" class="container">
   <div class="g12 alpha about-heading">
-    <h2>Дізнайтесь більше, з ким матемете справу!</h2>
+    <h2><%= t('variables.headers.article_pages') %></h2>
   </div>
   <br class="clear">
   <div class="g6 alpha im-descr-section">
-    <%= image_tag 'qoute-example.jpg', :alt => '' %>
-    <p>Вітаємо на нашому сайті - це вікно у світ нових можливостей навчання за кордоном!</p>
+    <%= image_tag 'qoute-example.jpg', :alt => t('variables.main_page.quote_image_alt') %>
+    <p><%= t('variables.main_page.quote_image_title') %></p>
   </div>
   <div class="g6 omega descr-section">
-    <p>З кожним роком навчання за кордоном стає дедалі більш популярним серед української молоді. Освіта, здобута у провідних європейських навчальних закладах, стає надійним фундаментом майбутнього кар’єрного зростання. Це поєднання теорії та навчальної практики у провідних європейських компаніях, досвіду міжнародного спілкування та побудови кар’єри у якості фахівця за обраним напрямком навчання. Ну і, звичайно ж, досконале засвоєння іноземної мови.</p>
+    <p><%= t('variables.main_page.quote_text') %></p>
   </div>
 </div>
 <br class="clear">
 <div id="index-render-shadow"></div>
 <div id="about-info-blocks" class="container">
   <div class="g4 in-about alpha">
-    <p>Наша компанія діє з 2008 року на підставі підписаних міжнародних угод про співпрацю з провідними навчальними закладами Європи, які зацікавлені у залученні (рекрутації) студентів із пострадянського простору, в тому числі, України. </p>
+    <p><%= t('variables.about_page.intro_section_first') %></p>
   </div>
   <div class="g4 in-about">
-    <p>На даний час у Європі виникає потреба у залученні якісних кадрів, що досконало володіють такими мовами, як російська та українська у зв’язку із розширенням ринку на схід.</p>
+    <p><%= t('variables.about_page.intro_section_second') %></p>
   </div>
   <div class="g4 in-about omega">
-    <p>Усім зацікавленим особам ми надаємо повну інформацію про той чи інший навчальний заклад та налагоджуємо безпосередню комунікацію між навчальними закладами та їхніми майбутніми студентами х території України.</p>
+    <p><%= t('variables.about_page.intro_section_third') %></p>
   </div>
 </div>
 <br class="clear">
@@ -34,7 +34,7 @@
       <%= image_tag 'hostel_ngo_logo.png', :alt => '' %>
     </div>
     <div class="description">
-      <p>Наша діяльність заохочується та підтримується ЛОГО «Асоціація малих готелів, хостелів і апартаментів» щодо залучення студентів для здобуття освіти за кордоном у напрямку готельно-ресторанного бізнесу.</p>
+      <p><%= t('variables.about_page.last_section_first') %></p>
     </div>
   </div>
 
@@ -43,7 +43,7 @@
       <%= image_tag 'as-section-item.jpg', :alt => '' %>
     </div>
     <div class="description">
-      <p>Станом на сьогодні наша компанія – офіційний та ексклюзивний представник на території України Mesoyios college (м. Пафос, Кіпр).</p>
+      <p><%= t('variables.about_page.last_section_second') %></p>
     </div>
   </div>
 </div>

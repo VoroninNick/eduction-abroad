@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= yield :title %></title>
+  <title>
+    <% if current_page?(about_path) %> <%= t('variables.menu.about_us') %> // <% elsif current_page?(article_path) || controller_name == 'articles' %> <%= t('variables.menu.articles') %> // <% elsif current_page?(university_path) || controller_name == 'university' %> <%= t('variables.menu.unis') %> // <% elsif current_page?(student_path) || controller_name == 'student' %> <%= t('variables.menu.students') %> // <% elsif current_page?(contact_path) %> <%= t('variables.menu.contact_us') %> // <% else %> <%= t('variables.menu.main') %> // <% end %> <%= t('variables.main_banner.heading') %> - <%= t('variables.main_banner.description') %>
+  </title>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -166,34 +168,34 @@
       <div class="g9 navigation-block omega">
         <nav>
           <ul>
-            <li <% if current_page?(about_path) %> class="visited" <% end %>><%= link_to_unless current_page?(about_path), 'Про нас', about_path, :title => 'Про нас' %></li>
-            <li <% if current_page?(article_path) || controller_name == 'articles' %> class="visited" <% end %>><%= link_to_unless current_page?(article_path) || controller_name == 'articles', 'Публікації', article_path, :title => 'Публікації' %></li>
-            <li <% if current_page?(university_path) || controller_name == 'university' %> class="visited" <% end %>><%= link_to 'Університети', university_path, :title => 'Університети' %></li>
-            <li <% if current_page?(student_path) || controller_name == 'student' %> class="visited" <% end %>><%= link_to 'Студентам', student_path, :title => 'Студентам' %></li>
-            <li <% if current_page?(contact_path) %> class="visited" <% end %>><%= link_to 'Контакти', contact_path, :title => 'Контакти' %></li>
+            <li <% if current_page?(about_path) %> class="visited" <% end %>><%= link_to_unless current_page?(about_path), t('variables.menu.about_us'), about_path, :title => t('variables.menu.about_us') %></li>
+            <li <% if current_page?(article_path) || controller_name == 'articles' %> class="visited" <% end %>><%= link_to_unless current_page?(article_path) || controller_name == 'articles', t('variables.menu.articles'), article_path, :title => t('variables.menu.articles') %></li>
+            <li <% if current_page?(university_path) || controller_name == 'university' %> class="visited" <% end %>><%= link_to t('variables.menu.unis'), university_path, :title => t('variables.menu.unis') %></li>
+            <li <% if current_page?(student_path) || controller_name == 'student' %> class="visited" <% end %>><%= link_to t('variables.menu.students'), student_path, :title => t('variables.menu.students')  %></li>
+            <li <% if current_page?(contact_path) %> class="visited" <% end %>><%= link_to t('variables.menu.contact_us'), contact_path, :title => t('variables.menu.contact_us') %></li>
           </ul>
         </nav>
       </div>
     </div>
     <div class="block-description">
       <div class="bd-wrapper">
-        <p class="h1 bd-head">Ваша готельна освіта у Mesoyios college</p>
-        <p class="bd-body"><i>м. Пафос, Кіпр</i></p>
-        <p class="bd-body">Європейська освіта, старт вашої кар'єри, гарантоване працевлаштування</p>
-        <p><%= link_to 'ПРИЄДНУЙСЯ!', about_path, :title => '', :class => 'bd-button' %></p>
+        <p class="h1 bd-head"><%= t('variables.main_banner.heading') %></p>
+        <p class="bd-body"><i><%= t('variables.main_banner.town') %></i></p>
+        <p class="bd-body"><%= t('variables.main_banner.description') %></p>
+        <p><%= link_to t('variables.main_banner.button'), about_path, :title => t('variables.main_banner.button'), :class => 'bd-button' %></p>
       </div>
     </div>
     <div id="heading-for-banners">
       <% if current_page?(about_path) %>
-      <h1>Про нас</h1>
+      <h1><%= t('variables.menu.about_us') %></h1>
       <% elsif current_page?(article_path) || controller_name == 'articles' %>
-      <h1>Публікації</h1>
+      <h1><%= t('variables.menu.articles') %></h1>
       <% elsif current_page?(university_path) || controller_name == 'university' %>
-      <h1>Університети</h1>
+      <h1><%= t('variables.menu.unis') %></h1>
       <% elsif current_page?(student_path) || controller_name == 'student' %>
-      <h1>Студентам</h1>
+      <h1><%= t('variables.students_page.heading') %></h1>
       <% elsif current_page?(contact_path) %>
-      <h1>Контакти</h1>
+      <h1><%= t('variables.menu.contact_us') %></h1>
       <% end %>
     </div>
   </div>
@@ -207,7 +209,7 @@
   <div class="container">
     <div class="g4 mf-item-block alpha">
       <p class="copy">© 2012 &mdash; 2013 Education Abroad</p>
-      <div class="copy-studio"><p class="image-copy"><%= image_tag 'studio-logotype.png', :alt => 'дизайн студією Миколи Вороніна' %></p> <p class="image-text">Зроблено <%= link_to 'дизайн студією Миколи Вороніна', 'http://voroninstudio.eu', :title => 'дизайн студією Миколи Вороніна', :target => '_blank' %>  <br> в 2013р. <%= link_to 'Інформація про сайт', 'http://voroninstudio.eu', :title => 'Інформація про сайт', :target => '_blank' %></p></div>
+      <div class="copy-studio"><p class="image-copy"><%= image_tag 'studio-logotype.png', :alt => t('variables.footer.sl_by_word_2') %></p> <p class="image-text"><%= t('variables.footer.sl_by_word_1') %> <%= link_to t('variables.footer.sl_by_word_2'), 'http://voroninstudio.eu', :title => t('variables.footer.sl_by_word_2'), :target => '_blank' %>  <br> <%= t('variables.footer.sl_by_word_3') %> <%= link_to t('variables.footer.sl_by_word_4'), 'http://voroninstudio.eu', :title => t('variables.footer.sl_by_word_4'), :target => '_blank' %></p></div>
     </div>
 
     <div class="g4 mf-item-block">
@@ -218,7 +220,7 @@
 
     <div class="g4 mf-item-block omega">
       <p class="tel">тел.: <span>+38 (098) 22 66 111</span> </p>
-      <p class="more-info"> <%= link_to 'Більш детальна контактна інформація', contact_path, :title => 'Більш детальна контактна інформація' %></p>
+      <p class="more-info"> <%= link_to t('variables.footer.contact_info'), contact_path, :title => t('variables.footer.contact_info') %></p>
     </div>
   </div>
 </div>
