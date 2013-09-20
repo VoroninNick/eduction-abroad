@@ -2,6 +2,13 @@
 class University < ActiveRecord::Base
   attr_accessible :avatar, :full_descr, :name, :published, :short_descr, :slug, :delete_avatar, :assets_attributes
 
+  # Adding translate Class
+  translates :name, :full_descr, :short_descr
+
+  class Translation
+    attr_accessible :locale
+  end
+
   validates_presence_of :name, :slug, :short_descr
   validates_uniqueness_of :name, :slug
   before_validation :get_url

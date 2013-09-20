@@ -2,6 +2,13 @@
 class Feedback < ActiveRecord::Base
   attr_accessible :age, :feedback, :name, :avatar
 
+  # Adding translate Class
+  translates :feedback, :name
+
+  class Translation
+    attr_accessible :locale
+  end
+
   has_attached_file :avatar,
                     :styles => {
                         admin:      '65x65#',

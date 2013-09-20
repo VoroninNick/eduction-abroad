@@ -2,6 +2,13 @@
 class Student < ActiveRecord::Base
   attr_accessible :answer, :published, :question, :slug
 
+  # Adding translate Class
+  translates :answer, :question
+
+  class Translation
+    attr_accessible :locale
+  end
+
   validates_presence_of :question, :slug, :answer
   validates_uniqueness_of :question, :slug
   before_validation :get_url
