@@ -128,6 +128,8 @@
       window.setTimeout(DisplayDescr, 3200);
       window.setTimeout(DisplayDescrBlock, 3300);
       window.setTimeout(ShowMainMenuINIT, 4000);
+
+
     });
 
   </script>
@@ -154,12 +156,12 @@
 <div id="main-header" class="clearfix">
   <div class="container">
     <div id="info-block">
-      <%= mail_to('i@education-abroad.com.ua', 'info') %>
-      <%= link_to('+38 (098) 22 66 111', 'tel:+38 (098) 22 66 111', :title => '+38 (098) 22 66 111') %>
+      <%= image_tag('mail-1.png', :style => 'margin-right: 10px;') %><%= mail_to('i@education-abroad.com.ua', 'info') %>
+      <%= image_tag('phone-2.png', :style => 'margin-right: 10px;') %><%= link_to('+38 (098) 22 66 111', 'tel:+38 (098) 22 66 111', :title => '+38 (098) 22 66 111') %>
     </div>
     <div class="navigation-wrapper">
       <div class="g3 alpha" id="logotype">
-        <%= link_to_unless current_page?(root_path), image_tag('logo.png', :alt => 'ТзОВ «Перспектива»', :style => 'margin-left: 5%;'), root_path %>
+        <%= link_to_unless current_page?(root_path), image_tag('logo.png', :alt => '', :style => 'margin-left: 5%;'), root_path %>
       </div>
       <div class="g-custom-mobile-menu">
       </div>
@@ -191,7 +193,7 @@
       <% elsif current_page?(university_path) || controller_name == 'university' %>
       <h1>Університети</h1>
       <% elsif current_page?(student_path) || controller_name == 'student' %>
-      <h1>Студентам</h1>
+      <h1>Відповіді на найбільш часті запитання</h1>
       <% elsif current_page?(contact_path) %>
       <h1>Контакти</h1>
       <% end %>
@@ -207,18 +209,28 @@
   <div class="container">
     <div class="g4 mf-item-block alpha">
       <p class="copy">© 2012 &mdash; 2013 Education Abroad</p>
-      <div class="copy-studio"><p class="image-copy"><%= image_tag 'studio-logotype.png', :alt => 'дизайн студією Миколи Вороніна' %></p> <p class="image-text">Зроблено <%= link_to 'дизайн студією Миколи Вороніна', 'http://voroninstudio.eu', :title => 'дизайн студією Миколи Вороніна', :target => '_blank' %>  <br> в 2013р. <%= link_to 'Інформація про сайт', 'http://voroninstudio.eu', :title => 'Інформація про сайт', :target => '_blank' %></p></div>
+      <script type="text/javascript">
+        $('#st-logo-click').click(function(){
+        window.location = 'http://voroninstudio.eu';
+      });
+        $('.copy-studio').click(function(){
+        window.location = 'http://voroninstudio.eu';
+      });
+      </script>
+      <div class="copy-studio"><p class="image-copy"><%= link_to(image_tag('studio-logotype.png', :alt => 'дизайн студією Миколи Вороніна', :id => 'st-logo-click'), 'http://voroninstudio.eu' ) %></p> <p class="image-text">Зроблено <%= link_to 'дизайн студією Миколи Вороніна', 'http://voroninstudio.eu', :title => 'дизайн студією Миколи Вороніна', :target => '_blank' %>  <br> в 2013р. <%= link_to 'Інформація про сайт', 'http://voroninstudio.eu', :title => 'Інформація про сайт', :target => '_blank' %></p></div>
     </div>
 
     <div class="g4 mf-item-block">
-      <%= link_to image_tag('social-links-f.png', :alt => 'Facebook'), facebook_path, :title => 'Facebook', :class => 'social-link' %>
-      <%= link_to image_tag('social-links-t.png', :alt => 'Vkontakte'), vk_path, :title => 'Vkontakte', :class => 'social-link' %>
-      <%= link_to image_tag('social-links-f.png', :alt => 'Linked In'), linkedin_path, :title => 'Linked In', :class => 'social-link' %>
+      <%= link_to image_tag('facebook.png', :alt => 'Facebook'), facebook_path, :title => 'Facebook', :class => 'social-link' %>
+      <%= link_to image_tag('vimeo.png', :alt => 'Vkontakte'), vk_path, :title => 'Vkontakte', :class => 'social-link' %>
+      <%= link_to image_tag('linkedin.png', :alt => 'Linked In'), linkedin_path, :title => 'Linked In', :class => 'social-link' %>
     </div>
 
     <div class="g4 mf-item-block omega">
       <p class="tel">тел.: <span>+38 (098) 22 66 111</span> </p>
+      <p class="more-info"> <%= link_to 'i@education-abroad.com.ua', 'mailto:i@education-abroad.com.ua', :title => '' %></p>
       <p class="more-info"> <%= link_to 'Більш детальна контактна інформація', contact_path, :title => 'Більш детальна контактна інформація' %></p>
+
     </div>
   </div>
 </div>

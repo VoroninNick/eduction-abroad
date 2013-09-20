@@ -15,7 +15,7 @@ UniAbroad::Application.routes.draw do
   match 'universities'                      => 'university#index',                :as => 'university', :via => 'get'
   match 'universities/:id'                  => 'university#show',                 :as => 'university_show', :via => 'get'
   match '~facebook/education-abroad.com.ua' => redirect('https://www.facebook.com/pages/Education-Abroad/549514665090016?skip_nax_wizard=true'),   :as => 'facebook'
-  match '~twitter/education-abroad.com.ua'  => redirect('http://vk.com/education_abroad_lviv'),    :as => 'vk'
-  match '~google/education-abroad.com.ua'   => redirect('http://www.linkedin.com/profile/view?id=258468555&trk=hb_tab_pro_top'),     :as => 'linkedin'
+  match '~vk/education-abroad.com.ua'  => redirect('http://vk.com/education_abroad_lviv'),    :as => 'vk'
+  match '~linkedin/education-abroad.com.ua'   => redirect('http://www.linkedin.com/profile/view?id=258468555&trk=hb_tab_pro_top'),     :as => 'linkedin'
   root                                  :to => 'page#index'
 end

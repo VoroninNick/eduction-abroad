@@ -14,6 +14,9 @@
         <h2><%= link_to uni.name, university_show_path(uni) %></h2>
         <p title="<%= uni.short_descr %>"><%= uni.short_descr %></p>
       </div>
+      <div class="link-to">
+        <%= link_to 'більш детальна інформація', university_show_path(uni) %>
+      </div>
     </div> <!-- .uni-item -->
     <br class="clear">
     <% end %>

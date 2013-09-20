@@ -15,21 +15,21 @@
     <%= form_for @contact, :url => contact_path do |form| %>
       <div class="g4 left-side alpha">
         <div class="row-input">
-          <%= form.text_field :name, :placeholder => 'Микола Валерійович' %>
+          <%= form.text_field :name, :placeholder => '' %>
           <%= form.label 'прізвище, імя ' %>
         </div>
         <div class="row-input">
-          <%= form.text_field :email, :placeholder => 'support@voroninstudio.eu' %>
+          <%= form.text_field :email, :placeholder => '' %>
           <%= form.label 'eл. пошта' %>
         </div>
         <div class="row-input">
-          <%= form.text_field :telephone, :placeholder => '+38 (050) 417 07 28' %>
+          <%= form.text_field :telephone, :placeholder => '' %>
           <%= form.label 'номер телефону *' %>
         </div>
       </div>
       <div class="g8 right-side omega">
         <div class="row-input">
-          <%= form.text_area :body, :placeholder => 'З кожним роком навчання за кордоном стає дедалі більш популярним серед української молоді. Освіта, здобута у провідних європейських навчальних закладах, стає надійним фундаментом майбутнього кар’єрного зростання. Це поєднання теорії та навчальної практики у провідних європейських компаніях, досвіду міжнародного спілкування та побудови кар’єри у якості фахівця за обраним напрямком навчання. Ну і, звичайно ж, досконале засвоєння іноземної мови.' %>
+          <%= form.text_area :body, :placeholder => '' %>
           <%= form.label 'текст повідомлення *' %>
         </div>
         <%= form.submit 'Надіслати', :class => 'submit-button' %>
