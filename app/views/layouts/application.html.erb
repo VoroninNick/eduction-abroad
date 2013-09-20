@@ -4,6 +4,9 @@
   <title>
     <% if current_page?(about_path) %> <%= t('variables.menu.about_us') %> // <% elsif current_page?(article_path) || controller_name == 'articles' %> <%= t('variables.menu.articles') %> // <% elsif current_page?(university_path) || controller_name == 'university' %> <%= t('variables.menu.unis') %> // <% elsif current_page?(student_path) || controller_name == 'student' %> <%= t('variables.menu.students') %> // <% elsif current_page?(contact_path) %> <%= t('variables.menu.contact_us') %> // <% else %> <%= t('variables.menu.main') %> // <% end %> <%= t('variables.main_banner.heading') %> - <%= t('variables.main_banner.description') %>
   </title>
+  <% if current_page?('/') %>
+    <meta http-equiv="refresh" content="0;URL='/uk'" />
+<% end %>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
