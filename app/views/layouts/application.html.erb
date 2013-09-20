@@ -130,6 +130,8 @@
       window.setTimeout(DisplayDescr, 3200);
       window.setTimeout(DisplayDescrBlock, 3300);
       window.setTimeout(ShowMainMenuINIT, 4000);
+
+
     });
 
   </script>
@@ -156,8 +158,8 @@
 <div id="main-header" class="clearfix">
   <div class="container">
     <div id="info-block">
-      <%= mail_to('i@education-abroad.com.ua', 'info') %>
-      <%= link_to('+38 (098) 22 66 111', 'tel:+38 (098) 22 66 111', :title => '+38 (098) 22 66 111') %>
+      <%= image_tag('mail-1.png', :style => 'margin-right: 10px;') %><%= mail_to('i@education-abroad.com.ua', 'info') %>
+      <%= image_tag('phone-2.png', :style => 'margin-right: 10px;') %><%= link_to('+38 (098) 22 66 111', 'tel:+38 (098) 22 66 111', :title => '+38 (098) 22 66 111') %>
     </div>
     <div class="navigation-wrapper">
       <div class="g3 alpha" id="logotype">
@@ -209,18 +211,28 @@
   <div class="container">
     <div class="g4 mf-item-block alpha">
       <p class="copy">© 2012 &mdash; 2013 Education Abroad</p>
+      <script type="text/javascript">
+        $('#st-logo-click').click(function(){
+        window.location = 'http://voroninstudio.eu';
+      });
+        $('.copy-studio').click(function(){
+        window.location = 'http://voroninstudio.eu';
+      });
+      </script>
       <div class="copy-studio"><p class="image-copy"><%= image_tag 'studio-logotype.png', :alt => t('variables.footer.sl_by_word_2') %></p> <p class="image-text"><%= t('variables.footer.sl_by_word_1') %> <%= link_to t('variables.footer.sl_by_word_2'), 'http://voroninstudio.eu', :title => t('variables.footer.sl_by_word_2'), :target => '_blank' %>  <br> <%= t('variables.footer.sl_by_word_3') %> <%= link_to t('variables.footer.sl_by_word_4'), 'http://voroninstudio.eu', :title => t('variables.footer.sl_by_word_4'), :target => '_blank' %></p></div>
     </div>
 
     <div class="g4 mf-item-block">
-      <%= link_to image_tag('social-links-f.png', :alt => 'Facebook'), facebook_path, :title => 'Facebook', :class => 'social-link' %>
-      <%= link_to image_tag('social-links-t.png', :alt => 'Vkontakte'), vk_path, :title => 'Vkontakte', :class => 'social-link' %>
-      <%= link_to image_tag('social-links-f.png', :alt => 'Linked In'), linkedin_path, :title => 'Linked In', :class => 'social-link' %>
+      <%= link_to image_tag('facebook.png', :alt => 'Facebook'), facebook_path, :title => 'Facebook', :class => 'social-link' %>
+      <%= link_to image_tag('vimeo.png', :alt => 'Vkontakte'), vk_path, :title => 'Vkontakte', :class => 'social-link' %>
+      <%= link_to image_tag('linkedin.png', :alt => 'Linked In'), linkedin_path, :title => 'Linked In', :class => 'social-link' %>
     </div>
 
     <div class="g4 mf-item-block omega">
       <p class="tel">тел.: <span>+38 (098) 22 66 111</span> </p>
       <p class="more-info"> <%= link_to t('variables.footer.contact_info'), contact_path, :title => t('variables.footer.contact_info') %></p>
+      <p class="more-info"> <%= link_to 'Більш детальна контактна інформація', contact_path, :title => 'Більш детальна контактна інформація' %></p>
+
     </div>
   </div>
 </div>

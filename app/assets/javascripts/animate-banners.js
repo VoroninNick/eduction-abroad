@@ -52,7 +52,7 @@ function ShowMainMenuINIT(){
                 opacity: 0.6
             },
             {
-                duration: 2800,
+                duration: 3400,
                 easing: 'easeInOutExpo'
             });
     });

@@ -437,7 +437,7 @@ textarea{
 }
 
 #breadcrumbs-render-main{
-  margin-bottom: 2em;
+  margin-bottom: 4em;
   ul{
     margin: 0;
     padding: 0;
@@ -646,6 +646,7 @@ table.uni-item-table{
     color: #ffffff;
     position: relative;
     top: 100px;
+    text-shadow: 1px 1px 2px black;
   }
 }
 
@@ -670,4 +671,15 @@ table.uni-item-table{
       }
     }
   }
+}
+
+.copy-studio{
+  a{
+    border-bottom:0 !important;
+    text-decoration: none;
+  }
+}
+
+#st-logo-click{
+  cursor: pointer;
 }

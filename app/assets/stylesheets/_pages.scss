@@ -180,19 +180,22 @@
           margin: 0 auto;
         }
         .name{
-          margin-bottom: 2em;
+          margin-bottom: 0em;
           color: rgb(219, 0, 85) !important;
           font-family: 'Segoe Print', Helvetica Neue, italic, cursive;
         }
         em.release{
           font-size: 80%;
+          display: block;
           font-style: italic !important;
-          margin-bottom: 2em;
+          margin-bottom: 3em;
+          color: #878787 !important
         }
         .short_descr{
-          margin-bottom: 2em;
+          margin-bottom: 3em;
           font-style: italic !important;
           width: 75%;
+          color: #878787 !important
         }
         .full_descr{
           margin-bottom: 2em;
@@ -235,13 +238,41 @@
       }
 
       .ir-about-item{
-        margin-top: 1.5em;
-        margin-bottom: 1.5em;
+        margin-top: 2.5em;
+        margin-bottom: 2.5em;
         //height: 198px;
         overflow: hidden;
         @media (min-width: 1px) and (max-width: 720px) {
           width: 98.0%;
           margin-bottom: 1.5em;
+        }
+
+        .link-to{
+          text-align: right;
+          a{
+          color: rgb(219, 0, 85);
+          border-bottom: 1px solid rgba(219, 0,85 ,0);
+          font-family: 'Segoe Print', Helvetica Neue, italic, cursive;
+
+          -webkit-transition: 0.5s ease-in all;
+              -moz-transition: 0.5s ease-in all;
+              -ms-transition: 0.5s ease-in all;
+              -o-transition: 0.5s ease-in all;
+              transition: 0.5s ease-in all;
+
+          margin: 0 0.5em;
+          &:hover{
+            color: rgb(219, 0, 85);
+            border-bottom: 1px solid rgba(219, 0,85 ,1);
+            font-family: 'Segoe Print', Helvetica Neue, italic, cursive;
+            text-align: center;
+          }
+          &:visited{
+            color: rgb(219, 0, 85);
+            font-family: 'Segoe Print', Helvetica Neue, italic, cursive;
+            text-align: center;
+          }
+        }
         }
 
         .avatar{
@@ -271,7 +302,7 @@
             width: 100%;
           }
           h3{
-            color: #868686;
+            color: rgb(219, 0, 85);
             font-family: 'Segoe Print', Helvetica Neue, italic, cursive;
             padding-bottom: 0.55em;
             a{
@@ -743,6 +774,30 @@
   }
 
   .uni-item.left{
+  .link-to{
+    text-align: left;
+    margin-top: 1em;
+    a{
+
+        color: rgb(219, 0, 85);
+        border-bottom: 1px solid rgba(219, 0, 85, 0);
+        font-family: 'Segoe Print', Helvetica Neue, italic, cursive;
+
+        -webkit-transition: 0.5s ease-in all;
+        -moz-transition: 0.5s ease-in all;
+        -ms-transition: 0.5s ease-in all;
+        -o-transition: 0.5s ease-in all;
+        transition: 0.5s ease-in all;
+
+        font-size: 0.9em;
+
+        &:hover{
+          border-bottom: 1px solid rgba(219, 0, 85, 1);
+        }
+
+
+      }
+  }
     .avatar{
       width: 30%;
       margin-right: 1%;
