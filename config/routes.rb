@@ -4,7 +4,7 @@ UniAbroad::Application.routes.draw do
   mount Ckeditor::Engine                    => '/ckeditor'
   mount RailsAdmin::Engine                  => '/admin',                          :as => 'rails_admin'
   root :to => redirect("/#{I18n.default_locale}")
-  
+
   scope '(:locale)', :locale => /ru|uk/ do
     match 'about-us'                          => 'page#about',                      :as => 'about', :via => 'get'
     match 'contact-us'                        => 'contact#new',                     :as => 'contact', :via => :get

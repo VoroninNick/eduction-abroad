@@ -171,9 +171,7 @@ GEM
     mobile-fu (1.1.1)
       rack-mobile-detect
       rails
-    modernizr-rails (2.6.2.1)
     multi_json (1.7.2)
-    mysql2 (0.3.11)
     nested_form (0.3.2)
     nokogiri (1.5.9)
     orm_adapter (0.4.0)
@@ -276,8 +274,6 @@ DEPENDENCIES
   jquery-ui-rails
   meta_request
   mobile-fu
-  modernizr-rails
-  mysql2
   paperclip
   paperclip-watermark
   rails (= 3.2.13)
