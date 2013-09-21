@@ -24,22 +24,17 @@ gem 'rails_admin_tag_list', :github => 'voroninstudio/rails_admin_tag_list'
 gem 'paperclip-watermark'
 gem 'globalize3'
 gem 'rails_admin_globalize', :github => 'voroninstudio/rails_admin_globalize'
+gem 'sqlite3'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
-  gem 'modernizr-rails'
 end
 
 group :development do
-  gem 'sqlite3'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'meta_request'
-end
-
-group :production do
-  gem 'mysql2'
 end
 
