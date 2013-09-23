@@ -162,8 +162,8 @@
   <div class="container">
     <div class="lang_bar">
       <ul>
-        <li <% if I18n.locale == :uk %> class="active" <% end %>><%= link_to_if I18n.locale != :uk, 'ua', '/uk', :title => 'Українська мова' %></li>
-        <li <% if I18n.locale == :ru %> class="active" <% end %>><%= link_to_if I18n.locale != :ru, 'ru', '/ru', :title => 'Русский язык'%></li>
+        <li <% if I18n.locale == :uk %> class="active" <% end %>><%= link_to_if I18n.locale != :uk, 'ua', url_for(:locale => 'uk'), :title => 'Українська мова' %></li>
+        <li <% if I18n.locale == :ru %> class="active" <% end %>><%= link_to_if I18n.locale != :ru, 'ru', url_for(:locale => 'ru'), :title => 'Русский язык'%></li>
       </ul>
     </div>
     <div id="info-block">
