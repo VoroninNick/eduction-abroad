@@ -20,7 +20,13 @@
 <div id="index-render-shadow"></div>
 <div id="index-render-intro" class="container">
   <div class="g6 alpha im-descr-section">
-    <%= image_tag 'qoute-example.jpg', :alt => t('variables.main_page.quote_image_alt') %>
+    <% if I18n.locale == :uk %>
+      <%= image_tag 'qoute-example.jpg', :alt => t('variables.main_page.quote_image_alt') %>
+    <% elsif I18n.locale == :ru %>
+      <%= image_tag 'qoute-example-ru.jpg', :alt => t('variables.main_page.quote_image_alt') %>
+    <% else %>
+      <%= image_tag 'qoute-example.jpg', :alt => t('variables.main_page.quote_image_alt') %>
+    <% end %>
     <p><%= t('variables.main_page.quote_image_title') %></p>
   </div>
   <div class="g6 omega descr-section">

@@ -161,8 +161,10 @@
 <div id="main-header" class="clearfix">
   <div class="container">
     <div class="lang_bar">
-      <%= link_to 'ua', '/uk', :title => 'Українська мова', :class => if I18n.locale == :uk; 'active' end %>
-      <%= link_to 'ru', '/ru', :title => 'Русский язык', :class => if I18n.locale == :ru; 'active' end %>
+      <ul>
+        <li <% if I18n.locale == :uk %> class="active" <% end %>><%= link_to_if I18n.locale != :uk, 'ua', '/uk', :title => 'Українська мова' %></li>
+        <li <% if I18n.locale == :ru %> class="active" <% end %>><%= link_to_if I18n.locale != :ru, 'ru', '/ru', :title => 'Русский язык'%></li>
+      </ul>
     </div>
     <div id="info-block">
       <%= image_tag('mail-1.png', :style => 'margin-right: 10px;') %><%= mail_to('i@education-abroad.com.ua', 'info') %>
@@ -217,7 +219,7 @@
 <div id="main-footer" class="clearfix">
   <div class="container">
     <div class="g4 mf-item-block alpha">
-      <p class="copy">© 2012 &mdash; 2013 Education Abroad</p>
+      <p class="copy">© 2012 &mdash; 2013 <%= t('variables.footer.edu_copy') %></p>
       <script type="text/javascript">
         $('#st-logo-click').click(function(){
         window.location = 'http://voroninstudio.eu';
@@ -238,8 +240,6 @@
     <div class="g4 mf-item-block omega">
       <p class="tel">тел.: <span>+38 (098) 22 66 111</span> </p>
       <p class="more-info"> <%= link_to t('variables.footer.contact_info'), contact_path, :title => t('variables.footer.contact_info') %></p>
-      <p class="more-info"> <%= link_to 'Більш детальна контактна інформація', contact_path, :title => 'Більш детальна контактна інформація' %></p>
-
     </div>
   </div>
 </div>
